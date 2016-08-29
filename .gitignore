@@ -2,6 +2,7 @@
 # Created by https://www.gitignore.io/api/osx,codekit
 /template/*
 /src/sass/.sass-cache
+/dist/
 
 ### OSX ###
 *.DS_Store
