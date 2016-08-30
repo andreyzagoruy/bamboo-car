@@ -59,7 +59,7 @@
   font-weight: 800;
   opacity: 0.1; }
 
-.text-heavy-small, section.section-prices th {
+.text-heavy-small, section.section-prices .table-holder table th {
   font-family: "FuturaPT";
   font-size: 14px;
   font-weight: 800; }
@@ -123,13 +123,13 @@ section {
   width: 1280px; }
 
 .content {
-  position: relative;
   display: inline-block;
+  position: relative;
   margin: 100px 140px; }
 
 .table-holder {
-  max-width: 100%;
-  overflow: auto; }
+  overflow: auto;
+  max-width: 100%; }
 
 .list-content {
   list-style: none; }
@@ -139,8 +139,8 @@ section {
 
 .list-index {
   position: absolute;
-  left: -42px;
-  top: 15px; }
+  top: 15px;
+  left: -42px; }
 
 .list-link {
   display: block; }
@@ -165,8 +165,8 @@ section {
     .header-top .container .header-logo {
       display: inline-block; }
     .header-top .container .header-call-us {
-      margin-right: 75px;
       display: inline-block;
+      margin-right: 75px;
       height: 50px; }
       .header-top .container .header-call-us .call-us-icon {
         padding-right: 8px; }
@@ -174,174 +174,174 @@ section {
         color: #353535; }
     .header-top .container .header-call-back {
       display: inline-block;
-      color: #ffffff;
       background-color: #f93d41;
+      color: #ffffff;
       width: 165px;
       height: 50px; }
 
-.section-main {
+section.section-main {
   min-height: 555px; }
-  .section-main .container .background-text {
-    left: 130px;
+  section.section-main .container .background-text {
     top: 70px;
+    left: 130px;
     width: 875px; }
-  .section-main .container .content {
+  section.section-main .container .content {
     width: 500px; }
-    .section-main .container .content .background-image {
+    section.section-main .container .content .background-image {
       position: absolute;
       top: -170px;
       left: 100%;
       margin-left: -80px;
       z-index: -2; }
 
-.section-laws {
-  min-height: 535px;
-  background-color: #224991; }
-  .section-laws .container .content {
-    width: 100%;
-    margin: 100px 0px 45px 140px; }
-    .section-laws .container .content .text-main-heading {
+section.section-laws {
+  background-color: #224991;
+  min-height: 535px; }
+  section.section-laws .container .content {
+    margin: 100px 0px 45px 140px;
+    width: 100%; }
+    section.section-laws .container .content .text-main-heading {
       color: #ffffff;
       width: 440px; }
-    .section-laws .container .content .list-content {
+    section.section-laws .container .content .list-content {
       margin-top: 60px; }
-      .section-laws .container .content .list-content .text-section-laws {
-        vertical-align: top;
-        width: 400px;
+      section.section-laws .container .content .list-content .text-section-laws {
+        display: inline-block;
         padding-bottom: 55px;
-        display: inline-block; }
-        .section-laws .container .content .list-content .text-section-laws .list-item .list-link {
+        width: 400px;
+        vertical-align: top; }
+        section.section-laws .container .content .list-content .text-section-laws .list-item .list-link {
           color: #698bca; }
-        .section-laws .container .content .list-content .text-section-laws .list-item-big {
+        section.section-laws .container .content .list-content .text-section-laws .list-item-big {
           width: 260px; }
-        .section-laws .container .content .list-content .text-section-laws .list-item-small {
+        section.section-laws .container .content .list-content .text-section-laws .list-item-small {
           width: 150px; }
 
 section.section-prices .container .content {
   position: relative;
   width: 520px; }
   section.section-prices .container .content .background-text {
-    z-index: -1;
     position: absolute;
     top: 40px;
     left: 100%;
-    width: 830px; }
+    width: 830px;
+    z-index: -1; }
   section.section-prices .container .content .background-image {
-    z-index: -2;
     position: absolute;
     top: 60px;
-    left: 110%; }
+    left: 110%;
+    z-index: -2; }
 section.section-prices .text-main-heading {
   width: 440px; }
 section.section-prices .table-holder {
-  overflow: initial;
-  margin-top: 45px; }
-section.section-prices table {
-  width: 100%;
-  text-align: left; }
-section.section-prices thead, section.section-prices tbody, section.section-prices tfoot {
-  display: block; }
-section.section-prices thead tr {
-  display: inline-block;
-  border-bottom: #ebebeb solid 1px;
-  padding-bottom: 10px; }
-section.section-prices thead th {
-  padding-right: 65px;
-  font-weight: 300; }
-  section.section-prices thead th:nth-child(1) {
-    font-weight: 800;
-    font-size: 16px; }
-  section.section-prices thead th:nth-child(3) {
-    padding-right: 0; }
-section.section-prices tbody {
-  margin-top: 10px; }
-  section.section-prices tbody th:nth-child(1) {
-    font-weight: 300; }
-  section.section-prices tbody tr:last-of-type th {
-    font-weight: 800;
-    color: #f93d41; }
-    section.section-prices tbody tr:last-of-type th:nth-child(2) {
-      color: #224991; }
-section.section-prices tfoot {
-  border-top: #ebebeb solid 1px;
-  padding-top: 20px; }
-  section.section-prices tfoot th:nth-child(2) {
-    color: #224991; }
-section.section-prices tr {
-  padding-bottom: 10px;
-  display: block;
-  white-space: nowrap; }
-section.section-prices th {
-  position: relative;
-  line-height: 1.2em;
-  vertical-align: top;
-  display: inline-block;
-  white-space: normal; }
-  section.section-prices th:nth-child(1) {
-    width: 240px; }
-  section.section-prices th:nth-child(2) {
-    width: 150px; }
-  section.section-prices th:nth-child(3) {
-    width: 84px; }
-  section.section-prices th .economy-price-holder {
-    border-top: #ebebeb solid 1px;
-    width: 530px;
-    position: absolute;
-    left: 100%;
-    top: -21px; }
-    section.section-prices th .economy-price-holder .economy-price-content {
-      transform: translateY(-50%);
-      position: relative;
+  margin-top: 45px;
+  overflow: initial; }
+  section.section-prices .table-holder table {
+    text-align: left;
+    width: 100%; }
+    section.section-prices .table-holder table thead, section.section-prices .table-holder table tbody, section.section-prices .table-holder table tfoot {
+      display: block; }
+    section.section-prices .table-holder table thead tr {
       display: inline-block;
-      width: 160px;
-      line-height: 35px;
-      height: 160px;
-      background-color: #f93d41;
-      border-radius: 50%;
-      color: #ffffff; }
-      section.section-prices th .economy-price-holder .economy-price-content::after {
-        content: "";
+      padding-bottom: 10px;
+      border-bottom: #ebebeb solid 1px; }
+    section.section-prices .table-holder table thead th {
+      font-weight: 300;
+      padding-right: 65px; }
+      section.section-prices .table-holder table thead th:nth-child(1) {
+        font-size: 16px;
+        font-weight: 800; }
+      section.section-prices .table-holder table thead th:nth-child(3) {
+        padding-right: 0; }
+    section.section-prices .table-holder table tbody {
+      margin-top: 10px; }
+      section.section-prices .table-holder table tbody th:nth-child(1) {
+        font-weight: 300; }
+      section.section-prices .table-holder table tbody tr:last-of-type th {
+        font-weight: 800;
+        color: #f93d41; }
+        section.section-prices .table-holder table tbody tr:last-of-type th:nth-child(2) {
+          color: #224991; }
+    section.section-prices .table-holder table tfoot {
+      padding-top: 20px;
+      border-top: #ebebeb solid 1px; }
+      section.section-prices .table-holder table tfoot th:nth-child(2) {
+        color: #224991; }
+    section.section-prices .table-holder table tr {
+      display: block;
+      padding-bottom: 10px;
+      white-space: nowrap; }
+    section.section-prices .table-holder table th {
+      display: inline-block;
+      position: relative;
+      line-height: 1.2em;
+      vertical-align: top;
+      white-space: normal; }
+      section.section-prices .table-holder table th:nth-child(1) {
+        width: 240px; }
+      section.section-prices .table-holder table th:nth-child(2) {
+        width: 150px; }
+      section.section-prices .table-holder table th:nth-child(3) {
+        width: 84px; }
+      section.section-prices .table-holder table th .economy-price-holder {
         position: absolute;
-        top: -10px;
-        left: -10px;
-        bottom: -10px;
-        right: -10px;
-        border: #f93d41 solid 1px;
-        border-radius: 50%; }
+        top: -21px;
+        left: 100%;
+        border-top: #ebebeb solid 1px;
+        width: 530px; }
+        section.section-prices .table-holder table th .economy-price-holder .economy-price-content {
+          display: inline-block;
+          position: relative;
+          background-color: #f93d41;
+          color: #ffffff;
+          border-radius: 50%;
+          line-height: 35px;
+          width: 160px;
+          height: 160px;
+          transform: translateY(-50%); }
+          section.section-prices .table-holder table th .economy-price-holder .economy-price-content::after {
+            content: "";
+            position: absolute;
+            top: -10px;
+            bottom: -10px;
+            left: -10px;
+            right: -10px;
+            border: #f93d41 solid 1px;
+            border-radius: 50%; }
 
-.section-advantages::before {
+section.section-advantages::before {
   content: "";
-  background-color: rgba(48, 48, 48, 0.56);
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
-  right: 0; }
+  right: 0;
+  background-color: rgba(48, 48, 48, 0.56); }
 
-.section-advantages {
+section.section-advantages {
   background: #224991 url("../images/bg/section_advantages_back.jpg") 0 0 no-repeat;
   background-size: cover;
   min-height: 410px; }
-  .section-advantages .container .content {
+  section.section-advantages .container .content {
     margin: 100px 0px 100px 140px; }
-    .section-advantages .container .content .text-main-heading {
+    section.section-advantages .container .content .text-main-heading {
       color: #ffffff;
       width: 320px; }
-    .section-advantages .container .content .list-content {
+    section.section-advantages .container .content .list-content {
       margin-top: 60px; }
-      .section-advantages .container .content .list-content li {
-        vertical-align: top;
+      section.section-advantages .container .content .list-content li {
         display: inline-block;
-        padding-right: 80px; }
-      .section-advantages .container .content .list-content li:last-of-type {
+        padding-right: 80px;
+        vertical-align: top; }
+      section.section-advantages .container .content .list-content li:last-of-type {
         padding-right: 0; }
-    .section-advantages .container .content .text-light-medium {
+    section.section-advantages .container .content .text-light-medium {
       color: #ffffff; }
-    .section-advantages .container .content .advantages-icon {
+    section.section-advantages .container .content .advantages-icon {
       display: inline-block; }
-    .section-advantages .container .content .advantages-text-small {
+    section.section-advantages .container .content .advantages-text-small {
       width: 90px; }
-    .section-advantages .container .content .advantages-text-big {
+    section.section-advantages .container .content .advantages-text-big {
       width: 165px; }
 
 section.section-how {
@@ -354,12 +354,12 @@ section.section-how {
   section.section-how .list-content {
     margin-top: 40px; }
     section.section-how .list-content li {
-      vertical-align: top;
-      margin-right: 65px;
+      display: inline-block;
       margin-bottom: 65px;
-      min-height: 140px;
+      margin-right: 65px;
       width: 270px;
-      display: inline-block; }
+      min-height: 140px;
+      vertical-align: top; }
     section.section-how .list-content li:nth-child(3n) {
       margin-right: 0; }
     section.section-how .list-content .how-text {
@@ -368,48 +368,48 @@ section.section-how {
       font-size: 0;
       height: 60px; }
       section.section-how .list-content .how-icons .icon-base {
-        width: 60px;
-        height: 60px;
+        background-color: #f93d41;
         border-radius: 50%;
-        background-color: #f93d41; }
+        width: 60px;
+        height: 60px; }
       section.section-how .list-content .how-icons .column-right {
         height: 60px; }
     section.section-how .list-content .text-light-small {
       padding-top: 10px; }
 
 section.section-services {
-  min-height: 535px;
-  background-color: #224991; }
+  background-color: #224991;
+  min-height: 535px; }
   section.section-services .container .content {
-    width: 100%;
-    margin: 100px 0px 45px 140px; }
+    margin: 100px 0px 45px 140px;
+    width: 100%; }
     section.section-services .container .content .text-main-heading {
       color: #ffffff;
       width: 390px; }
     section.section-services .container .content .list-content {
       margin-top: 60px; }
       section.section-services .container .content .list-content .text-section-services {
-        vertical-align: top;
-        width: 400px;
-        padding-bottom: 55px;
         display: inline-block;
-        min-height: 200px; }
+        padding-bottom: 55px;
+        width: 400px;
+        min-height: 200px;
+        vertical-align: top; }
         section.section-services .container .content .list-content .text-section-services .list-item .list-heading {
           color: #ffffff;
           line-height: 24px; }
         section.section-services .container .content .list-content .text-section-services .list-item .list-paragraph {
-          line-height: 24px;
-          color: #698bca; }
+          color: #698bca;
+          line-height: 24px; }
         section.section-services .container .content .list-content .text-section-services .list-item-big {
           width: 265px; }
         section.section-services .container .content .list-content .text-section-services .list-item-small {
           width: 150px; }
         section.section-services .container .content .list-content .text-section-services .button-order {
-          width: 100%;
-          height: 125px;
           background: none;
-          border: 3px solid #ffffff; }
+          border: 3px solid #ffffff;
+          width: 100%;
+          height: 125px; }
           section.section-services .container .content .list-content .text-section-services .button-order span {
-            color: #ffffff;
             display: block;
+            color: #ffffff;
             line-height: 1em; }

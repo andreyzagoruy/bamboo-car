@@ -1,5 +1,6 @@
 *
   box-sizing: border-box
+
 a
   text-decoration: none
 
@@ -14,13 +15,13 @@ section
   width: 1280px
 
 .content
-  position: relative
   display: inline-block
+  position: relative
   margin: 100px 140px
 
 .table-holder
-  max-width: 100%
   overflow: auto
+  max-width: 100%
 
 .list-content
   list-style: none
@@ -30,8 +31,8 @@ section
 
 .list-index
   position: absolute
-  left: -42px
   top: 15px
+  left: -42px
 
 .list-link
   display: block
@@ -55,8 +56,8 @@ section
     .header-logo
       display: inline-block
     .header-call-us
-      margin-right: 75px
       display: inline-block
+      margin-right: 75px
       height: 50px
       .call-us-icon
         padding-right: 8px
@@ -64,17 +65,17 @@ section
         color: $color-main-black
     .header-call-back
       display: inline-block
-      color: $color-main-white
       background-color: $color-main-red
+      color: $color-main-white
       width: 165px
       height: 50px
 
-.section-main
+section.section-main
   min-height: 555px
   .container
     .background-text
-      left: 130px
       top: 70px
+      left: 130px
       width: 875px
     .content
       width: 500px
@@ -85,23 +86,23 @@ section
         margin-left: -80px
         z-index: -2
 
-.section-laws
-  min-height: 535px
+section.section-laws
   background-color: $color-bg-blue
+  min-height: 535px
   .container
     .content
-      width: 100%
       margin: 100px 0px 45px 140px
+      width: 100%
       .text-main-heading
         color: $color-main-white
         width: 440px
       .list-content
         margin-top: 60px
         .text-section-laws
-          vertical-align: top
-          width: 400px
-          padding-bottom: 55px
           display: inline-block
+          padding-bottom: 55px
+          width: 400px
+          vertical-align: top
           .list-item
             .list-text
             .list-link
@@ -117,108 +118,107 @@ section.section-prices
       position: relative
       width: 520px
       .background-text
-        z-index: -1
         position: absolute
         top: 40px
         left: 100%
         width: 830px
+        z-index: -1
       .background-image
-        z-index: -2
         position: absolute
         top: 60px
         left: 110%
+        z-index: -2
   .text-main-heading
     width: 440px
   .table-holder
-    overflow: initial
     margin-top: 45px
-  table
-    width: 100%
-    text-align: left
-  thead, tbody, tfoot
-    display: block
-  thead
-    tr
-      display: inline-block
-      border-bottom: $color-hr solid 1px
-      padding-bottom: 10px
-    th
-      padding-right: 65px
-      font-weight: 300
-      &:nth-child(1)
-        font-weight: 800
-        font-size: 16px
-      &:nth-child(3)
-        padding-right: 0
-  tbody
-    margin-top: 10px
-    th:nth-child(1)
-      font-weight: 300
-    tr:last-of-type
-      th
-        font-weight: 800
-        color: $color-main-red
-        &:nth-child(2)
+    overflow: initial
+    table
+      text-align: left
+      width: 100%
+      thead, tbody, tfoot
+        display: block
+      thead
+        tr
+          display: inline-block
+          padding-bottom: 10px
+          border-bottom: $color-hr solid 1px
+        th
+          font-weight: 300
+          padding-right: 65px
+          &:nth-child(1)
+            font-size: 16px
+            font-weight: 800
+          &:nth-child(3)
+            padding-right: 0
+      tbody
+        margin-top: 10px
+        th:nth-child(1)
+          font-weight: 300
+        tr:last-of-type
+          th
+            font-weight: 800
+            color: $color-main-red
+            &:nth-child(2)
+              color: $color-bg-blue
+      tfoot
+        padding-top: 20px
+        border-top: $color-hr solid 1px
+        th:nth-child(2)
           color: $color-bg-blue
-  tfoot
-    border-top: $color-hr solid 1px
-    padding-top: 20px
-    th:nth-child(2)
-      color: $color-bg-blue
-  tr
-    padding-bottom: 10px
-    display: block
-    white-space: nowrap
-  th
-    @extend .text-heavy-small
-    position: relative
-    line-height: 1.2em
-    vertical-align: top
-    display: inline-block
-    white-space: normal
-    &:nth-child(1)
-      width: 240px
-    &:nth-child(2)
-      width: 150px
-    &:nth-child(3)
-      width: 84px
-    .economy-price-holder
-      border-top: $color-hr solid 1px
-      width: 530px
-      position: absolute
-      left: 100%
-      top: -21px
-      .economy-price-content
-        transform: translateY(-50%)
-        position: relative
+      tr
+        display: block
+        padding-bottom: 10px
+        white-space: nowrap
+      th
+        @extend .text-heavy-small
         display: inline-block
-        width: 160px
-        line-height: 35px
-        height: 160px
-        background-color: $color-main-red
-        border-radius: 50%
-        color: $color-main-white
-        &::after
-          content: ""
+        position: relative
+        line-height: 1.2em
+        vertical-align: top
+        white-space: normal
+        &:nth-child(1)
+          width: 240px
+        &:nth-child(2)
+          width: 150px
+        &:nth-child(3)
+          width: 84px
+        .economy-price-holder
           position: absolute
-          top: -10px
-          left: -10px
-          bottom: -10px
-          right: -10px
-          border: $color-main-red solid 1px
-          border-radius: 50%
+          top: -21px
+          left: 100%
+          border-top: $color-hr solid 1px
+          width: 530px
+          .economy-price-content
+            display: inline-block
+            position: relative
+            background-color: $color-main-red
+            color: $color-main-white
+            border-radius: 50%
+            line-height: 35px
+            width: 160px
+            height: 160px
+            transform: translateY(-50%)
+            &::after
+              content: ""
+              position: absolute
+              top: -10px
+              bottom: -10px
+              left: -10px
+              right: -10px
+              border: $color-main-red solid 1px
+              border-radius: 50%
 
-
-
-.section-advantages::before
+section.section-advantages::before
   content: ""
-  background-color:  rgba(48, 48, 48, 0.56)
   position: absolute
   top: 0
   bottom: 0
   left: 0
   right: 0
-.section-advantages
+  background-color:  rgba(48, 48, 48, 0.56)
+
+section.section-advantages
   background: $color-bg-blue url("../images/bg/section_advantages_back.jpg") 0 0 no-repeat
   background-size: cover
   min-height: 410px
@@ -231,9 +231,9 @@ section.section-prices
       .list-content
         margin-top: 60px
         li
-          vertical-align: top
           display: inline-block
           padding-right: 80px
+          vertical-align: top
         li:last-of-type
           padding-right: 0
       .text-light-medium
@@ -255,12 +255,12 @@ section.section-how
   .list-content
     margin-top: 40px
     li
-      vertical-align: top
-      margin-right: 65px
-      margin-bottom: 65px
-      min-height: 140px
-      width: 270px
       display: inline-block
+      margin-bottom: 65px
+      margin-right: 65px
+      width: 270px
+      min-height: 140px
+      vertical-align: top
     li:nth-child(3n)
       margin-right: 0
     .how-text
@@ -269,50 +269,50 @@ section.section-how
       font-size: 0
       height: 60px
       .icon-base
+        background-color: $color-main-red
+        border-radius: 50%
         width: 60px
         height: 60px
-        border-radius: 50%
-        background-color: $color-main-red
       .column-right
         height: 60px
     .text-light-small
       padding-top: 10px
 
 section.section-services
-  min-height: 535px
   background-color: $color-bg-blue
+  min-height: 535px
   .container
     .content
-      width: 100%
       margin: 100px 0px 45px 140px
+      width: 100%
       .text-main-heading
         color: $color-main-white
         width: 390px
       .list-content
         margin-top: 60px
         .text-section-services
-          vertical-align: top
-          width: 400px
-          padding-bottom: 55px
           display: inline-block
+          padding-bottom: 55px
+          width: 400px
           min-height: 200px
+          vertical-align: top
           .list-item
             .list-heading
               color: $color-main-white
               line-height: 24px
             .list-paragraph
-              line-height: 24px
               color: $color-list-link
+              line-height: 24px
           .list-item-big
             width: 265px
           .list-item-small
             width: 150px
           .button-order
-            width: 100%
-            height: 125px
             background: none
             border: 3px solid $color-main-white
+            width: 100%
+            height: 125px
             span
-              color: $color-main-white
               display: block
+              color: $color-main-white
               line-height: 1em
