@@ -1,0 +1,229 @@
+*
+  box-sizing: border-box
+a
+  text-decoration: none
+
+section
+  position: relative
+  overflow: hidden
+
+.container
+  box-sizing: border-box
+  position: relative
+  margin: 0 auto
+  width: 1280px
+
+.content
+  position: relative
+  display: inline-block
+  margin: 100px 140px
+
+.table-holder
+  max-width: 100%
+  overflow: auto
+
+.list-content
+  list-style: none
+
+.list-item
+  position: relative
+
+.list-index
+  position: absolute
+  left: -42px
+  top: 15px
+
+.list-link
+  display: block
+
+.column-left
+  display: inline-block
+  text-align: left
+  width: 50%
+.column-right
+  display: inline-block
+  text-align: right
+  width: 50%
+
+.background-text
+  position: absolute
+
+.header-top
+  font-size: 0
+  .container
+    padding: 18px 55px
+    .header-logo
+      display: inline-block
+    .header-call-us
+      margin-right: 75px
+      display: inline-block
+      height: 50px
+      .call-us-icon
+        padding-right: 8px
+      a
+        color: $color-main-black
+    .header-call-back
+      display: inline-block
+      color: $color-main-white
+      background-color: $color-main-red
+      width: 165px
+      height: 50px
+
+.section-main
+  min-height: 555px
+  .container
+    .background-text
+      left: 130px
+      top: 70px
+      width: 875px
+    .content
+      width: 500px
+      .background-image
+        position: absolute
+        top: -170px
+        left: 100%
+        margin-left: -80px
+        z-index: -2
+
+.section-laws
+  min-height: 535px
+  background-color: $color-bg-blue
+  .container
+    .content
+      width: 100%
+      margin: 100px 0px 45px 140px
+      .text-main-heading
+        color: $color-main-white
+        width: 440px
+      .list-content
+        margin-top: 60px
+        .text-section-laws
+          vertical-align: top
+          width: 400px
+          padding-bottom: 55px
+          display: inline-block
+          .list-item
+            .list-text
+            .list-link
+              color: $color-list-link
+          .list-item-big
+            width: 260px
+          .list-item-small
+            width: 150px
+
+section.section-prices
+  .container
+    .content
+      position: relative
+      width: 520px
+      .background-text
+        z-index: -1
+        position: absolute
+        top: 40px
+        left: 100%
+        width: 830px
+      .background-image
+        z-index: -2
+        position: absolute
+        top: 60px
+        left: 110%
+  .text-main-heading
+    width: 440px
+  .table-holder
+    overflow: initial
+    margin-top: 45px
+  table
+    width: 100%
+    text-align: left
+  thead, tbody, tfoot
+    display: block
+  thead
+    tr
+      display: inline-block
+      border-bottom: $color-hr solid 1px
+      padding-bottom: 10px
+    th
+      padding-right: 65px
+      font-weight: 300
+      &:nth-child(1)
+        font-weight: 800
+        font-size: 16px
+      &:nth-child(3)
+        padding-right: 0
+  tbody
+    margin-top: 10px
+    th:nth-child(1)
+      font-weight: 300
+    tr:last-of-type
+      th
+        font-weight: 800
+        color: $color-main-red
+        &:nth-child(2)
+          color: $color-bg-blue
+  tfoot
+    border-top: $color-hr solid 1px
+    padding-top: 20px
+    th:nth-child(2)
+      color: $color-bg-blue
+  tr
+    padding-bottom: 10px
+    display: block
+    white-space: nowrap
+  th
+    @extend .text-heavy-small
+    position: relative
+    line-height: 1.2em
+    vertical-align: top
+    display: inline-block
+    white-space: normal
+    &:nth-child(1)
+      width: 240px
+    &:nth-child(2)
+      width: 150px
+    &:nth-child(3)
+      width: 84px
+    .economy-price-holder
+      border-top: $color-hr solid 1px
+      width: 530px
+      position: absolute
+      left: 100%
+      top: -21px
+      .economy-price-content
+        transform: translateY(-50%)
+        position: relative
+        display: inline-block
+        width: 160px
+        line-height: 35px
+        height: 160px
+        background-color: $color-main-red
+        border-radius: 50%
+        color: $color-main-white
+        &::after
+          content: ""
+          position: absolute
+          top: -10px
+          left: -10px
+          bottom: -10px
+          right: -10px
+          border: $color-main-red solid 1px
+          border-radius: 50%
+
+
+
+.section-advantages::before
+  content: ""
+  background-color:  rgba(48, 48, 48, 0.56)
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+.section-advantages
+  background: $color-bg-blue url("../images/bg/section_advantages_back.jpg") 0 0 no-repeat
+  background-size: cover
+  min-height: 410px
+  .container
+    .content
+      .text-main-heading
+        color: $color-main-white
+        width: 320px

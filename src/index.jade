@@ -3,3 +3,127 @@ doctype html
 html(lang = "ru")
   include includes/head.jade
   body
+    .pagination
+    header.header-top
+      .container
+        .column-left
+          .header-logo
+            a(href="#")
+              img(src="images/icons/logo-top.png", alt="Main header logo")
+        .column-right
+          .header-call-us
+            .call-us-icon.text-vertical-align
+              img(src="images/icons/icon_phone.png", alt="Call us image")
+            .call-us-text.text-vertical-align  
+              a(class="text-light-small", href='tel:+380934427800') +380 93 442 78 00
+          a(href="#")
+            .header-call-back.text-center
+              p.text-bold-small.text-uppercase.text-vertical-align Обратный звонок
+              
+    section.section-main
+      .container
+        .background-text.text-uppercase
+          span bamboo car
+        .content 
+          h1.text-top-heading
+            span.text-top-heading-highlight Экономия от 500 до 4000 евро 
+            | при покупке б/у авто в Европе
+          p.text-light Помогаем приобрести, растаможить и оформить б/у авто из Польши и Германии
+          .background-image
+            img(src="images/bg/section_main_car.jpg", alt="BMW 5 Series sample image")
+        
+    section.section-laws
+      .container
+        .content
+          h2.text-main-heading Основные положения и выгоды Закона Украины №1389-19
+          ul.list-content
+            li.text-section-laws
+              .list-item.list-item-big
+                .list-index.text-heavy-big
+                  span 1
+                span.list-text Снижение акциза на автомобили - на 90%
+                a(class="list-link text-book-small", href="#") Читать далее
+            li.text-section-laws
+              .list-item.list-item-big
+                .list-index.text-heavy-big
+                  span 2
+                span.list-text Снижение ставок таможенной пошлины - с 10% до 9.1%
+                a(class="list-link text-book-small", href="#") Читать далее
+            li.text-section-laws
+              .list-item.list-item-small
+                .list-index.text-heavy-big
+                  span 3
+                span.list-text Стандарт авто - начиная с Euro 5
+                a(class="list-link text-book-small", href="#") Читать далее
+            li.text-section-laws
+              .list-item.list-item-small
+                .list-index.text-heavy-big
+                  span 4
+                span.list-text Возраст авто - не старше 6 лет
+                a(class="list-link text-book-small", href="#") Читать далее
+            li.text-section-laws
+              .list-item.list-item-small
+                .list-index.text-heavy-big
+                  span 5
+                span.list-text Действие закона - до конца 2018 года
+                a(class="list-link text-book-small", href="#") Читать далее
+              
+    section.section-prices
+      .container
+        .content
+          h2.text-main-heading Cтоимость машин из Европы vs стоимость машин в Украине
+          .table-holder
+            table
+              thead
+                tr
+                  th Skoda Fabia 1.2 HTP
+                  th Полная ставка акциза
+                  th Сниженная ставка акциза
+              tbody
+                tr
+                  th Стоимость в ЕС
+                  th 3500 €
+                tr
+                  th Рабочий обьем двигателя, куб. см
+                  th 1198
+                tr
+                  th Ввозная пошлина
+                  th 9,1% - 319 €
+                tr
+                  th Акцизный сбор
+                  th 2110 €
+                  th 75 €
+                tr
+                  th НДС
+                  th 1185 €
+                  th 779 €
+                tr
+                  th Финальная стоимость
+                  th 7114 €
+                  th 4673 €
+              tfoot
+                tr
+                  th Стоимость в Украине
+                  th от 7000 €
+                  th
+                    .economy-price-holder.text-center
+                      .economy-price-content
+                        span.text-heavy-small.text-vertical-align.text-center Экономия
+                          br
+                          span.text-heavy-medium.text-big 3327 €
+          .background-text.text-uppercase
+            span В чем выгода
+          .background-image
+            img(src="images/bg/section_prices_car.jpg", alt="Skoda Fabia sample image")
+          
+    
+    section.section-advantages
+      .container
+        .content
+          h2.text-main-heading Ценность европейских машин выше из-за
+    
+    section.section-how
+    section.section-services
+    section.section-reviews
+    section.section-consult
+    footer.footer-bottom
