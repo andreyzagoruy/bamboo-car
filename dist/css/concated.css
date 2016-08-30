@@ -343,3 +343,36 @@ section.section-prices th {
       width: 90px; }
     .section-advantages .container .content .advantages-text-big {
       width: 165px; }
+
+section.section-how {
+  min-height: 575px; }
+  section.section-how .content {
+    margin: 100px 0px 35px 140px; }
+  section.section-how .background-text {
+    top: -50px;
+    left: 80px; }
+  section.section-how .list-content {
+    margin-top: 40px; }
+    section.section-how .list-content li {
+      vertical-align: top;
+      margin-right: 65px;
+      margin-bottom: 65px;
+      min-height: 140px;
+      width: 270px;
+      display: inline-block; }
+    section.section-how .list-content li:nth-child(3n) {
+      margin-right: 0; }
+    section.section-how .list-content .how-text {
+      text-align: justify; }
+    section.section-how .list-content .how-icons {
+      font-size: 0;
+      height: 60px; }
+      section.section-how .list-content .how-icons .icon-base {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: #f93d41; }
+      section.section-how .list-content .how-icons .column-right {
+        height: 60px; }
+    section.section-how .list-content .text-light-small {
+      padding-top: 10px; }
