@@ -94,6 +94,13 @@
   line-height: 28px;
   color: #353535; }
 
+.text-light-medium {
+  font-family: "FuturaPT";
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 30px;
+  color: #353535; }
+
 .text-light-small {
   font-family: "FuturaPT";
   font-size: 14px;
@@ -315,6 +322,24 @@ section.section-prices th {
   background: #224991 url("../images/bg/section_advantages_back.jpg") 0 0 no-repeat;
   background-size: cover;
   min-height: 410px; }
-  .section-advantages .container .content .text-main-heading {
-    color: #ffffff;
-    width: 320px; }
+  .section-advantages .container .content {
+    margin: 100px 0px 100px 140px; }
+    .section-advantages .container .content .text-main-heading {
+      color: #ffffff;
+      width: 320px; }
+    .section-advantages .container .content .list-content {
+      margin-top: 60px; }
+      .section-advantages .container .content .list-content li {
+        vertical-align: top;
+        display: inline-block;
+        padding-right: 80px; }
+      .section-advantages .container .content .list-content li:last-of-type {
+        padding-right: 0; }
+    .section-advantages .container .content .text-light-medium {
+      color: #ffffff; }
+    .section-advantages .container .content .advantages-icon {
+      display: inline-block; }
+    .section-advantages .container .content .advantages-text-small {
+      width: 90px; }
+    .section-advantages .container .content .advantages-text-big {
+      width: 165px; }
