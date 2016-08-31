@@ -9,6 +9,18 @@
     <link rel="stylesheet" href="css/concated.css">
   </head>
   <body>
+    <div id="fb-root">
+      <script>
+        (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.7";
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+        
+      </script>
+    </div>
     <div class="pagination"></div>
     <header class="header-top">
       <div class="container">
@@ -293,6 +305,23 @@
     </section>
     <section class="section-reviews"></section>
     <section class="section-consult"></section>
-    <footer class="footer-bottom"></footer>
+    <footer class="footer-bottom">
+      <div class="container">
+        <div class="column-left">
+          <div class="footer-logo"><a href="#"><img src="images/icons/logo-bottom.png" alt="Main footer logo"></a></div>
+          <ul class="footer-contact text-book-small">
+            <li>Главный офис - г. Киев</li>
+            <li>Ул. Саксаганского 123, оф. 20</li>
+            <li> <a href="tel:+380934427800" class="text-light-small">+380 93 442 78 00</a></li>
+            <li> <a href="mailto:drive@bamboocar.com.ua">drive@bamboocar.com.ua</a></li>
+          </ul>
+        </div>
+        <div class="column-right">
+          <div data-href="https://www.facebook.com/BambookAcademy/" data-width="400" data-height="155" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" class="fb-page">
+            <blockquote cite="https://www.facebook.com/BambookAcademy/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/BambookAcademy/">Bambook Academy</a></blockquote>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

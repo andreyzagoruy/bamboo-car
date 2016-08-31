@@ -413,3 +413,27 @@ section.section-services {
             display: block;
             color: #ffffff;
             line-height: 1em; }
+
+.footer-bottom .container {
+  font-size: 0;
+  min-height: 185px; }
+  .footer-bottom .container .column-left {
+    width: 60%;
+    vertical-align: top; }
+    .footer-bottom .container .column-left .footer-logo {
+      vertical-align: top;
+      display: inline-block;
+      margin-top: 50px;
+      margin-left: 60px; }
+    .footer-bottom .container .column-left .footer-contact {
+      color: #878787;
+      line-height: 26px;
+      margin-top: 35px;
+      display: inline-block;
+      list-style: none; }
+      .footer-bottom .container .column-left .footer-contact a {
+        color: #878787; }
+  .footer-bottom .container .column-right {
+    padding-top: 15px;
+    width: 40%;
+    text-align: left; }

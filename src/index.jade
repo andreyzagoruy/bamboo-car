@@ -3,6 +3,16 @@ doctype html
 html(lang = "ru")
   include includes/head.jade
   body
+    #fb-root
+      script.
+        (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.7";
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+  
     .pagination
     header.header-top
       .container
@@ -249,3 +259,22 @@ html(lang = "ru")
     section.section-reviews
     section.section-consult
     footer.footer-bottom
+      .container
+        .column-left
+          .footer-logo
+            a(href="#")
+              img(src="images/icons/logo-bottom.png", alt="Main footer logo")
+          ul.footer-contact.text-book-small
+            li Главный офис - г. Киев
+            li Ул. Саксаганского 123, оф. 20
+            li 
+              a(class="text-light-small", href='tel:+380934427800') +380 93 442 78 00
+            li 
+              a(href='mailto:drive@bamboocar.com.ua') drive@bamboocar.com.ua
+        .column-right
+          .fb-page(data-href='https://www.facebook.com/BambookAcademy/', data-width='400', data-height='155', data-small-header='true', data-adapt-container-width='true', data-hide-cover='false', data-show-facepile='true')
+            blockquote.fb-xfbml-parse-ignore(cite='https://www.facebook.com/BambookAcademy/')
+              a(href='https://www.facebook.com/BambookAcademy/') Bambook Academy
+
+
+            
