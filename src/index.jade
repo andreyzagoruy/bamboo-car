@@ -264,6 +264,23 @@ html(lang = "ru")
         .content
           .column-left
             h2.text-main-heading Запишитесь на бесплатную консультацию
+            form.form-consult
+              .form-consult-top
+                span.form-label.text-bold-small.text-uppercase о себе
+                input(class="text-book-small", type="text", placeholder="Имя", name="name")
+                input(class="text-book-small", type="text", placeholder="Телефон", name="phone")
+                input(class="text-book-small", type="text", placeholder="Email", name="email")
+                select(class="text-book-small", name="country")
+                  option(value="initial") Выберите страну
+              .form-consult-bottom
+                span.form-label.text-bold-small.text-uppercase машина
+                select(class="text-book-small", name="type")
+                  option(value="initial") Выберите тип
+                select(class="text-book-small", name="fuel")
+                  option(value="initial") Выберите топлево
+                input(class="text-book-small", type="text", placeholder="Возраст авто", name="age")
+                input(class="text-book-small", type="text", placeholder="Обьем двигателя", name="engine")
+              input(class="text-heavy-small form-consult-submit", type="submit", placeholder="ОТПРАВИТЬ", name="submit")
           .column-right
             h2.text-main-heading После консультации:
             ul

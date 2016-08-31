@@ -299,7 +299,8 @@ section.section-prices .table-holder {
           line-height: 35px;
           width: 160px;
           height: 160px;
-          transform: translateY(-50%); }
+          -webkit-transform: translateY(-50%);
+                  transform: translateY(-50%); }
           section.section-prices .table-holder table th .economy-price-holder .economy-price-content::after {
             content: "";
             position: absolute;
@@ -413,12 +414,16 @@ section.section-services {
             display: block;
             color: #ffffff;
             line-height: 1em; }
+        section.section-services .container .content .list-content .text-section-services .button-order:hover {
+          background-color: #ffffff; }
+          section.section-services .container .content .list-content .text-section-services .button-order:hover span {
+            color: #224991; }
 
 section.section-reviews {
   min-height: 680px; }
 
 section.section-consult {
-  height: 480px;
+  height: 540px;
   font-size: 0; }
   section.section-consult .left-side {
     display: inline-block;
@@ -434,9 +439,9 @@ section.section-consult {
     top: 0;
     width: 0;
     height: 0;
-    border-top: 240px solid transparent;
-    border-right: 240px solid transparent;
-    border-bottom: 240px solid transparent;
+    border-top: 270px solid transparent;
+    border-right: 270px solid transparent;
+    border-bottom: 270px solid transparent;
     border-left: 50px solid #224991; }
   section.section-consult .right-side {
     height: 100%;
@@ -444,16 +449,55 @@ section.section-consult {
     width: 45%;
     background-color: #f93d41; }
   section.section-consult .container {
-    margin-top: -480px; }
+    margin-top: -540px; }
     section.section-consult .container .content {
       margin: 65px 140px; }
       section.section-consult .container .content .text-main-heading {
         color: #ffffff; }
       section.section-consult .container .content .column-left {
-        vertical-align: top; }
+        vertical-align: top;
+        width: 60%; }
+        section.section-consult .container .content .column-left .text-main-heading {
+          width: 385px; }
+        section.section-consult .container .content .column-left .form-consult {
+          margin-top: 30px;
+          margin-left: 100px; }
+          section.section-consult .container .content .column-left .form-consult input, section.section-consult .container .content .column-left .form-consult select {
+            -webkit-appearance: none;
+            text-indent: 10px;
+            margin: 10px;
+            background: #28519d;
+            border: none;
+            width: 215px;
+            height: 40px; }
+          section.section-consult .container .content .column-left .form-consult select {
+            background: #28519d url("../images/icons/select_arrow.png") 190px 20px no-repeat; }
+          section.section-consult .container .content .column-left .form-consult .text-book-small {
+            color: #ffffff; }
+          section.section-consult .container .content .column-left .form-consult ::-webkit-input-placeholder {
+            color: #ffffff; }
+          section.section-consult .container .content .column-left .form-consult ::-moz-placeholder {
+            color: #ffffff; }
+          section.section-consult .container .content .column-left .form-consult :-ms-input-placeholder {
+            color: #ffffff; }
+          section.section-consult .container .content .column-left .form-consult ::placeholder {
+            color: #ffffff; }
+          section.section-consult .container .content .column-left .form-consult .form-consult-top, section.section-consult .container .content .column-left .form-consult .form-consult-bottom {
+            margin-bottom: 10px;
+            position: relative; }
+            section.section-consult .container .content .column-left .form-consult .form-consult-top .form-label, section.section-consult .container .content .column-left .form-consult .form-consult-bottom .form-label {
+              color: #698bca;
+              top: 22px;
+              left: -100px;
+              position: absolute; }
+          section.section-consult .container .content .column-left .form-consult .form-consult-submit {
+            text-indent: 0;
+            color: #224991;
+            background: #ffffff; }
       section.section-consult .container .content .column-right {
+        width: 40%;
         text-align: left;
-        padding-left: 180px;
+        padding-left: 120px;
         vertical-align: top; }
         section.section-consult .container .content .column-right ul {
           width: 350px;

@@ -316,12 +316,16 @@ section.section-services
               display: block
               color: $color-main-white
               line-height: 1em
+          .button-order:hover
+            background-color: $color-main-white
+            span
+              color: $color-bg-blue
 
 section.section-reviews
   min-height: 680px
 
 section.section-consult
-  height: 480px
+  height: 540px
   font-size: 0
   .left-side
     display: inline-block
@@ -337,9 +341,9 @@ section.section-consult
     top: 0
     width: 0
     height: 0
-    border-top: 240px solid transparent
-    border-right: 240px solid transparent
-    border-bottom: 240px solid transparent
+    border-top: 270px solid transparent
+    border-right: 270px solid transparent
+    border-bottom: 270px solid transparent
     border-left: 50px solid $color-bg-blue
   .right-side
     height: 100%
@@ -347,16 +351,49 @@ section.section-consult
     width: 45%
     background-color: $color-main-red
   .container
-    margin-top: -480px
+    margin-top: -540px
     .content
       margin: 65px 140px
       .text-main-heading
         color: $color-main-white
       .column-left
         vertical-align: top
+        width: 60%
+        .text-main-heading
+          width: 385px
+        .form-consult
+          margin-top: 30px
+          margin-left: 100px
+          input, select
+            -webkit-appearance: none
+            text-indent: 10px
+            margin: 10px
+            background: $color-input
+            border: none
+            width: 215px
+            height: 40px
+          select
+            background: $color-input url("../images/icons/select_arrow.png") 190px 20px no-repeat
+          .text-book-small
+            color: $color-main-white
+          ::placeholder
+            color: $color-main-white
+          .form-consult-top, .form-consult-bottom
+            margin-bottom: 10px
+            position: relative
+            .form-label
+              color: $color-list-link
+              top: 22px
+              left: -100px
+              position: absolute
+          .form-consult-submit
+            text-indent: 0
+            color: $color-bg-blue
+            background: $color-main-white
       .column-right
+        width: 40%
         text-align: left
-        padding-left: 180px
+        padding-left: 120px
         vertical-align: top
         ul
           width: 350px
