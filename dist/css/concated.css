@@ -120,7 +120,8 @@ section {
   box-sizing: border-box;
   position: relative;
   margin: 0 auto;
-  width: 1280px; }
+  width: 1280px;
+  max-width: 90%; }
 
 .content {
   display: inline-block;
@@ -358,10 +359,9 @@ section.section-how {
       margin-bottom: 65px;
       margin-right: 65px;
       width: 270px;
+      max-width: 80%;
       min-height: 140px;
       vertical-align: top; }
-    section.section-how .list-content li:nth-child(3n) {
-      margin-right: 0; }
     section.section-how .list-content .how-text {
       text-align: justify; }
     section.section-how .list-content .how-icons {
