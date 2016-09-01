@@ -65,11 +65,18 @@ section
       a
         color: $color-main-black
     .header-call-back
+      box-sizing: content-box
       display: inline-block
       background-color: $color-main-red
       color: $color-main-white
       width: 165px
       height: 50px
+    .header-call-back:hover
+      width: 159px
+      height: 44px
+      color: $color-main-red
+      background-color: $color-main-white
+      border: 3px solid $color-main-red
 
 section.section-main
   min-height: 555px
@@ -403,6 +410,10 @@ section.section-consult
             text-indent: 0
             color: $color-bg-blue
             background: $color-main-white
+          .form-consult-submit:hover
+            color: $color-main-white
+            background: $color-bg-blue
+            border: 3px solid $color-main-white
       .column-right
         width: 40%
         text-align: left
