@@ -120,8 +120,7 @@ section {
   box-sizing: border-box;
   position: relative;
   margin: 0 auto;
-  width: 1280px;
-  max-width: 90%; }
+  width: 1280px; }
 
 .content {
   display: inline-block;
@@ -232,13 +231,13 @@ section.section-prices .container .content {
   width: 520px; }
   section.section-prices .container .content .background-text {
     position: absolute;
-    top: 40px;
+    top: 32px;
     left: 100%;
     width: 830px;
     z-index: -1; }
   section.section-prices .container .content .background-image {
     position: absolute;
-    top: 60px;
+    top: 34px;
     left: 110%;
     z-index: -2; }
 section.section-prices .text-main-heading {
@@ -296,9 +295,10 @@ section.section-prices .table-holder {
       section.section-prices .table-holder table th .economy-price-holder {
         position: absolute;
         top: -21px;
-        left: 100%;
+        left: 140%;
         border-top: #ebebeb solid 1px;
-        width: 530px; }
+        width: 680px;
+        width: 35vw; }
         section.section-prices .table-holder table th .economy-price-holder .economy-price-content {
           display: inline-block;
           position: relative;
@@ -559,3 +559,139 @@ section.section-consult {
     padding-top: 15px;
     width: 35%;
     text-align: left; }
+
+@media screen and (max-width: 1366px) {
+  .container {
+    width: 100%; }
+
+  .content {
+    margin: 100px 0px 100px 110px; }
+
+  section.section-laws .container .content .list-content .text-section-laws {
+    width: 32%;
+    margin: 0; }
+    section.section-laws .container .content .list-content .text-section-laws .list-item-big {
+      width: 70%; }
+
+  section.section-advantages {
+    min-height: 500px;
+    background-position: -500px 0px; }
+    section.section-advantages .container .content {
+      width: 100%;
+      padding-right: 175px; }
+      section.section-advantages .container .content .list-content li {
+        width: 20%;
+        margin-right: 0; }
+        section.section-advantages .container .content .list-content li p {
+          display: inline-block; }
+      section.section-advantages .container .content .advantages-icon {
+        width: 75%; }
+      section.section-advantages .container .content .advantages-text-small {
+        width: 80px;
+        display: inline-block; }
+      section.section-advantages .container .content .advantages-text-big {
+        width: 70%;
+        display: inline-block; }
+
+  section.section-how .list-content li {
+    margin-right: 0;
+    width: 32%; }
+  section.section-how .list-content .how-text {
+    width: 75%; }
+  section.section-how .list-content .how-icons {
+    width: 75%; }
+
+  section.section-services .container .content {
+    padding-right: 110px; }
+    section.section-services .container .content .list-content .text-section-services {
+      width: 32%; }
+      section.section-services .container .content .list-content .text-section-services .list-item-big {
+        width: 75%; }
+      section.section-services .container .content .list-content .text-section-services .list-item-small {
+        width: 75%; }
+
+  section.section-consult .left-side {
+    width: 58%; }
+  section.section-consult .right-side {
+    width: 42%; }
+  section.section-consult .container {
+    margin-top: -540px; }
+    section.section-consult .container .content .column-left {
+      width: 65%; }
+    section.section-consult .container .content .column-right {
+      width: 35%;
+      padding-left: 40px; } }
+@media screen and (max-width: 1170px) {
+  .background-text {
+    display: none; }
+
+  .header-top .container {
+    padding: 18px 18px; }
+    .header-top .container .column-left {
+      width: 30%; }
+    .header-top .container .column-right {
+      width: 70%; }
+
+  .content {
+    margin: 80px 0px 80px 60px; }
+
+  section.section-main .container .content {
+    width: 380px; }
+
+  section.section-advantages .container .content {
+    padding-right: 60px; }
+    section.section-advantages .container .content .list-content li {
+      text-align: left; }
+
+  section.section-how .list-content {
+    padding: 0; }
+    section.section-how .list-content .how-icons .column-right {
+      display: none; }
+    section.section-how .list-content .how-text {
+      text-align: left; }
+      section.section-how .list-content .how-text .text-light-medium {
+        line-height: 24px; }
+
+  section.section-services .container .content {
+    padding-right: 60px; }
+
+  section.section-consult .container .content {
+    margin: 65px 60px; }
+    section.section-consult .container .content .column-left {
+      width: 100%; }
+      section.section-consult .container .content .column-left .form-consult {
+        width: 480px; }
+        section.section-consult .container .content .column-left .form-consult .form-consult-top .form-label, section.section-consult .container .content .column-left .form-consult .form-consult-bottom .form-label {
+          left: -75px; }
+    section.section-consult .container .content .column-right {
+      display: none; }
+  section.section-consult .left-side {
+    width: 100%; }
+  section.section-consult .right-side {
+    display: none; }
+
+  .footer-bottom .container .column-left {
+    width: 50%; }
+    .footer-bottom .container .column-left .footer-logo {
+      margin-left: 10px; }
+    .footer-bottom .container .column-left .footer-contact {
+      padding-left: 30px; }
+  .footer-bottom .container .column-right {
+    width: 50%;
+    padding-right: 12px;
+    text-align: right; } }
+@media screen and (max-width: 870px) {
+  section.section-laws .container .content .list-content {
+    padding: 0; }
+    section.section-laws .container .content .list-content .text-section-laws .list-item .list-index {
+      display: none; }
+
+  section.section-prices .table-holder table th .economy-price-holder {
+    left: 65%; }
+  section.section-prices .container .content .background-image {
+    left: 90%; }
+
+  section.section-services .container .content .list-content {
+    padding: 0; }
+    section.section-services .container .content .list-content .text-section-services .list-item-big .list-index {
+      display: none; } }
