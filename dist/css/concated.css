@@ -126,7 +126,7 @@ section {
 .content {
   display: inline-block;
   position: relative;
-  margin: 100px 140px; }
+  margin: 100px 0px 100px 140px; }
 
 .table-holder {
   overflow: auto;
@@ -199,8 +199,9 @@ section.section-laws {
   background-color: #224991;
   min-height: 535px; }
   section.section-laws .container .content {
-    margin: 100px 0px 45px 140px;
     width: 100%; }
+    section.section-laws .container .content .list-container {
+      margin-bottom: -55px; }
     section.section-laws .container .content .text-main-heading {
       color: #ffffff;
       width: 440px; }
@@ -209,7 +210,8 @@ section.section-laws {
       section.section-laws .container .content .list-content .text-section-laws {
         display: inline-block;
         padding-bottom: 55px;
-        width: 400px;
+        width: 230px;
+        margin-right: 155px;
         vertical-align: top; }
         section.section-laws .container .content .list-content .text-section-laws .list-item .list-link {
           color: #698bca; }
@@ -324,32 +326,40 @@ section.section-advantages {
   background: #224991 url("../images/bg/section_advantages_back.jpg") 0 0 no-repeat;
   background-size: cover;
   min-height: 410px; }
-  section.section-advantages .container .content {
-    margin: 100px 0px 100px 140px; }
-    section.section-advantages .container .content .text-main-heading {
-      color: #ffffff;
-      width: 320px; }
-    section.section-advantages .container .content .list-content {
-      margin-top: 60px; }
-      section.section-advantages .container .content .list-content li {
-        display: inline-block;
-        padding-right: 80px;
-        vertical-align: top; }
-      section.section-advantages .container .content .list-content li:last-of-type {
-        padding-right: 0; }
-    section.section-advantages .container .content .text-light-medium {
-      color: #ffffff; }
-    section.section-advantages .container .content .advantages-icon {
-      display: inline-block; }
-    section.section-advantages .container .content .advantages-text-small {
-      width: 90px; }
-    section.section-advantages .container .content .advantages-text-big {
-      width: 165px; }
+  section.section-advantages .container .content .list-container {
+    margin-bottom: -30px; }
+  section.section-advantages .container .content .text-main-heading {
+    color: #ffffff;
+    width: 320px; }
+  section.section-advantages .container .content .list-content {
+    padding: 0;
+    font-size: 0;
+    margin-top: 60px; }
+    section.section-advantages .container .content .list-content li {
+      width: 165px;
+      text-align: center;
+      display: inline-block;
+      margin-right: 40px;
+      margin-bottom: 30px;
+      vertical-align: top; }
+    section.section-advantages .container .content .list-content li:last-of-type {
+      padding-right: 0; }
+  section.section-advantages .container .content .text-light-medium {
+    color: #ffffff; }
+  section.section-advantages .container .content .advantages-icon {
+    width: 100%;
+    height: 38px;
+    display: inline-block; }
+  section.section-advantages .container .content .advantages-text-small {
+    width: 90px;
+    margin: 0 auto; }
+  section.section-advantages .container .content .advantages-text-big {
+    width: 165px; }
 
 section.section-how {
   min-height: 575px; }
-  section.section-how .content {
-    margin: 100px 0px 35px 140px; }
+  section.section-how .content .list-content {
+    margin-bottom: -65px; }
   section.section-how .background-text {
     top: -50px;
     left: 80px; }
@@ -382,8 +392,9 @@ section.section-services {
   background-color: #224991;
   min-height: 535px; }
   section.section-services .container .content {
-    margin: 100px 0px 45px 140px;
     width: 100%; }
+    section.section-services .container .content .list-container {
+      margin-bottom: -55px; }
     section.section-services .container .content .text-main-heading {
       color: #ffffff;
       width: 390px; }
@@ -392,7 +403,7 @@ section.section-services {
       section.section-services .container .content .list-content .text-section-services {
         display: inline-block;
         padding-bottom: 55px;
-        width: 400px;
+        width: 340px;
         min-height: 200px;
         vertical-align: top; }
         section.section-services .container .content .list-content .text-section-services .list-item .list-heading {
@@ -461,9 +472,11 @@ section.section-consult {
           width: 385px; }
         section.section-consult .container .content .column-left .form-consult {
           margin-top: 30px;
-          margin-left: 100px; }
+          margin-left: 80px; }
           section.section-consult .container .content .column-left .form-consult input, section.section-consult .container .content .column-left .form-consult select {
             -webkit-appearance: none;
+               -moz-appearance: none;
+                    appearance: none;
             text-indent: 10px;
             margin: 10px;
             background: #28519d;
@@ -497,11 +510,13 @@ section.section-consult {
       section.section-consult .container .content .column-right {
         width: 40%;
         text-align: left;
-        padding-left: 120px;
+        padding-left: 80px;
         vertical-align: top; }
+        section.section-consult .container .content .column-right .text-main-heading {
+          width: 300px; }
         section.section-consult .container .content .column-right ul {
-          width: 350px;
-          margin-top: 55px;
+          width: 330px;
+          margin-top: 75px;
           list-style-image: url("../images/icons/checkmark.png"); }
           section.section-consult .container .content .column-right ul span {
             line-height: 24px;

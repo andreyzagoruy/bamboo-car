@@ -18,7 +18,7 @@ section
 .content
   display: inline-block
   position: relative
-  margin: 100px 140px
+  margin: 100px 0px 100px 140px
 
 .table-holder
   overflow: auto
@@ -92,7 +92,8 @@ section.section-laws
   min-height: 535px
   .container
     .content
-      margin: 100px 0px 45px 140px
+      .list-container
+        margin-bottom: -55px
       width: 100%
       .text-main-heading
         color: $color-main-white
@@ -102,7 +103,8 @@ section.section-laws
         .text-section-laws
           display: inline-block
           padding-bottom: 55px
-          width: 400px
+          width: 230px
+          margin-right: 155px
           vertical-align: top
           .list-item
             .list-text
@@ -225,31 +227,41 @@ section.section-advantages
   min-height: 410px
   .container
     .content
-      margin: 100px 0px 100px 140px
+      .list-container
+        margin-bottom: -30px
       .text-main-heading
         color: $color-main-white
         width: 320px
       .list-content
+        padding: 0
+        font-size: 0
         margin-top: 60px
         li
+          width: 165px
+          text-align: center
           display: inline-block
-          padding-right: 80px
+          margin-right: 40px
+          margin-bottom: 30px
           vertical-align: top
         li:last-of-type
           padding-right: 0
       .text-light-medium
         color: $color-main-white
       .advantages-icon
+        width: 100%
+        height: 38px
         display: inline-block
       .advantages-text-small
         width: 90px
+        margin: 0 auto
       .advantages-text-big
         width: 165px
 
 section.section-how
   min-height: 575px
   .content
-    margin: 100px 0px 35px 140px
+    .list-content
+      margin-bottom: -65px
   .background-text
     top: -50px
     left: 80px
@@ -283,7 +295,8 @@ section.section-services
   min-height: 535px
   .container
     .content
-      margin: 100px 0px 45px 140px
+      .list-container
+        margin-bottom: -55px
       width: 100%
       .text-main-heading
         color: $color-main-white
@@ -293,7 +306,7 @@ section.section-services
         .text-section-services
           display: inline-block
           padding-bottom: 55px
-          width: 400px
+          width: 340px
           min-height: 200px
           vertical-align: top
           .list-item
@@ -363,9 +376,9 @@ section.section-consult
           width: 385px
         .form-consult
           margin-top: 30px
-          margin-left: 100px
+          margin-left: 80px
           input, select
-            -webkit-appearance: none
+            appearance: none
             text-indent: 10px
             margin: 10px
             background: $color-input
@@ -393,11 +406,13 @@ section.section-consult
       .column-right
         width: 40%
         text-align: left
-        padding-left: 120px
+        padding-left: 80px
         vertical-align: top
+        .text-main-heading
+          width: 300px
         ul
-          width: 350px
-          margin-top: 55px
+          width: 330px
+          margin-top: 75px
           list-style-image: url("../images/icons/checkmark.png")
           span
             line-height: 24px
