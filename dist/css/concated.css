@@ -723,8 +723,9 @@ section.section-consult {
     section.section-main .container {
       text-align: center; }
       section.section-main .container .content {
-        margin: 15px;
-        width: auto; }
+        margin: 0;
+        padding: 20px;
+        width: 100%; }
         section.section-main .container .content .text-top-heading {
           font-size: 24px; }
         section.section-main .container .content .text-light {
@@ -736,8 +737,9 @@ section.section-consult {
   section.section-laws {
     min-height: 155px; }
     section.section-laws .container .content {
-      margin: 15px;
-      width: auto !important;
+      margin: 0;
+      padding: 40px 20px;
+      width: 100%;
       text-align: center;
       width: 100%; }
       section.section-laws .container .content .list-container {
@@ -754,6 +756,151 @@ section.section-consult {
             width: 100%; }
           section.section-laws .container .content .list-content .text-section-laws .list-item-small {
             width: 100%; }
+
+  section.section-prices .table-holder table thead tr {
+    width: 100%; }
+  section.section-prices .table-holder table thead th {
+    padding-right: 10px; }
+    section.section-prices .table-holder table thead th:nth-child(3) {
+      padding-right: 5px; }
+  section.section-prices .table-holder table th {
+    padding-right: 10px; }
+    section.section-prices .table-holder table th:nth-child(1) {
+      width: 40%; }
+    section.section-prices .table-holder table th:nth-child(2) {
+      width: 30%; }
+    section.section-prices .table-holder table th:nth-child(3) {
+      width: 30%; }
+    section.section-prices .table-holder table th .economy-price-holder {
+      display: none; }
+  section.section-prices .container .content {
+    margin: 0;
+    padding: 40px 20px;
+    width: 100%;
+    text-align: center; }
+    section.section-prices .container .content .text-main-heading {
+      width: 100%; }
+    section.section-prices .container .content .background-image {
+      display: none; }
+
+  section.section-advantages .container .content {
+    margin: 0;
+    padding: 40px 20px;
+    width: 100%;
+    text-align: center; }
+    section.section-advantages .container .content .text-main-heading {
+      width: 100%; }
+    section.section-advantages .container .content .list-content {
+      margin-top: 35px; }
+      section.section-advantages .container .content .list-content li {
+        width: 100%;
+        display: inline-block;
+        margin-right: 0;
+        margin-bottom: 30px;
+        text-align: center; }
+    section.section-advantages .container .content .text-light-medium {
+      margin: 0; }
+    section.section-advantages .container .content .advantages-icon {
+      width: 100%;
+      height: 38px;
+      display: inline-block; }
+    section.section-advantages .container .content .advantages-text-small {
+      width: 100%; }
+    section.section-advantages .container .content .advantages-text-big {
+      width: 100%; }
+
+  section.section-how .content {
+    margin: 0;
+    padding: 40px 15px 70px;
+    width: 100%;
+    text-align: center; }
+  section.section-how .list-content {
+    margin-top: 35px; }
+    section.section-how .list-content li {
+      min-height: 10px;
+      display: inline-block;
+      margin-bottom: 35px;
+      margin-right: 0;
+      width: 100%; }
+    section.section-how .list-content li:last-of-type {
+      margin-top: -40px; }
+      section.section-how .list-content li:last-of-type .how-icons {
+        display: none; }
+    section.section-how .list-content .how-text {
+      text-align: center;
+      width: 100%; }
+    section.section-how .list-content .how-icons {
+      width: 100%; }
+      section.section-how .list-content .how-icons .column-left {
+        width: 60px; }
+
+  section.section-services .container .content {
+    margin: 0;
+    padding: 40px 20px 70px;
+    width: 100%;
+    text-align: center;
+    width: 100%; }
+    section.section-services .container .content .list-container {
+      margin-bottom: -55px; }
+    section.section-services .container .content .text-main-heading {
+      width: 100%; }
+    section.section-services .container .content .list-content {
+      margin-top: 25px; }
+      section.section-services .container .content .list-content .text-section-services {
+        padding-bottom: 25px;
+        width: 100%;
+        min-height: 10px; }
+        section.section-services .container .content .list-content .text-section-services .list-item .list-paragraph {
+          margin: 8px 0px; }
+        section.section-services .container .content .list-content .text-section-services .list-item-big {
+          width: 100%; }
+        section.section-services .container .content .list-content .text-section-services .list-item-small {
+          width: 100%; }
+        section.section-services .container .content .list-content .text-section-services .button-order {
+          width: 205px; }
+          section.section-services .container .content .list-content .text-section-services .button-order span {
+            display: block;
+            color: #ffffff;
+            line-height: 1em; }
+        section.section-services .container .content .list-content .text-section-services .button-order:hover {
+          background-color: #ffffff; }
+          section.section-services .container .content .list-content .text-section-services .button-order:hover span {
+            color: #224991; }
+
+  section.section-consult {
+    height: auto; }
+    section.section-consult .container {
+      margin: 0; }
+      section.section-consult .container .content {
+        background-color: #224991;
+        margin: 0;
+        padding: 40px 20px;
+        width: 100%;
+        text-align: center; }
+        section.section-consult .container .content .column-left {
+          text-align: center;
+          width: 100%; }
+          section.section-consult .container .content .column-left .text-main-heading {
+            width: 100%; }
+          section.section-consult .container .content .column-left .form-consult {
+            width: 100%;
+            margin-left: 0; }
+            section.section-consult .container .content .column-left .form-consult .form-consult-top, section.section-consult .container .content .column-left .form-consult .form-consult-bottom {
+              margin-top: 40px; }
+              section.section-consult .container .content .column-left .form-consult .form-consult-top .form-label, section.section-consult .container .content .column-left .form-consult .form-consult-bottom .form-label {
+                top: -28px;
+                left: 50%;
+                -webkit-transform: translateX(-50%);
+                        transform: translateX(-50%); }
+            section.section-consult .container .content .column-left .form-consult input, section.section-consult .container .content .column-left .form-consult select {
+              margin: 0px;
+              margin-bottom: 5px;
+              width: 100%;
+              height: 40px; }
+            section.section-consult .container .content .column-left .form-consult select {
+              background-position: 93% 20px; }
+    section.section-consult .left-side {
+      display: none; }
 
   .footer-bottom {
     display: none; } }
