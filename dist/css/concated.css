@@ -749,6 +749,9 @@ section.section-consult {
     section.section-services .container .content .list-content .text-section-services .list-item-big .list-index {
       display: none; } }
 @media screen and (max-width: 755px) {
+  .modal-content {
+    width: 100%; }
+
   .text-main-heading {
     font-size: 21px;
     line-height: 30px; }
