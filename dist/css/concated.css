@@ -187,9 +187,11 @@ section.navigation {
       margin: 0;
       padding-left: 70px; }
   section.navigation .sections-pagination {
-    width: 5px; }
+    width: 10px; }
   section.navigation .pagination-link {
-    margin-bottom: 15px;
+    margin-bottom: 5px;
+    height: 10px;
+    width: 10px;
     display: inline-block; }
   section.navigation .pagination-default {
     background-color: #878787;
