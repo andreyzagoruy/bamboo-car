@@ -192,17 +192,18 @@ section.navigation {
     text-align: center;
     padding: 2px 10px;
     display: inline-block; }
-  section.navigation .pagination-default {
-    vertical-align: middle;
-    display: inline-block;
-    background-color: #878787;
-    width: 3px;
-    height: 3px;
-    border-radius: 50%; }
-  section.navigation .pagination-link:hover .pagination-default {
+    section.navigation .pagination-link:after {
+      content: "";
+      vertical-align: middle;
+      display: inline-block;
+      background-color: #878787;
+      width: 3px;
+      height: 3px;
+      border-radius: 50%; }
+  section.navigation .pagination-link:hover:after {
     width: 5px;
     height: 5px; }
-  section.navigation .pagination-active {
+  section.navigation .pagination-active:after {
     width: 5px;
     height: 5px;
     background-color: #f93d41; }

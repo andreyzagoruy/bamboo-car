@@ -1,5 +1,17 @@
 (function ($) {
 
+$('.sections-pagination').find('.pagination-link').on('click', function (e) {
+	e.preventDefault();
+	$(this)
+		.addClass('pagination-active')
+		.siblings()
+		.removeClass('pagination-active');
+	var $target = $( $( this ).attr('href') );
+	if ($target.length) {
+		$("html, body").stop().animate({scrollTop:$target.offset().top}, 600);
+	}
+});
+
 $.fn.doubleSlider = function (opt) {
 
 	// options
@@ -260,5 +272,73 @@ $.fn.doubleSlider = function (opt) {
 	}
 };
 
+
+	$.fn.landingNavigation = function (opt) {
+		var winHeightHalf;
+		this.each(function (i) {
+
+			var DOM = {},
+				state = {},
+				array = [],
+				$self = $(this);
+
+			// options
+			if (!opt) {
+				opt = {
+					'linkClass': 'pagination-link'
+				};
+			}
+			opt = $.extend({
+			}, opt);
+
+			// methods
+			var plg = {
+				init: function () {
+					DOM.$lnks = $self.find('.' + opt.linkClass);
+					plg.resize();
+				},
+				scroll: function (top) {
+					for (var y = 0; y < array.length; y++) {
+						if (top < array[y].val && y) {
+							plg.avtive(array[y - 1].$elem);
+							return;
+						} else if (y == array.length - 1) {
+							plg.avtive(array[y].$elem);
+						}
+					}
+				},
+				avtive: function ($el) {
+					if ($el !== state.$active) {
+						DOM.$lnks.removeClass('pagination-active');
+						$el.addClass('pagination-active');
+						state.$active = $el;
+					}
+				},
+				resize: function () {
+					winHeightHalf = $(window).height() / 2;
+					DOM.$lnks.each(function (i, elem) {
+							array[i] = {};
+							array[i].$elem = $(elem);
+							array[i].trg = $(elem).attr('href') || $(elem).data('target');
+							array[i].val = $(array[i].trg).offset().top;
+						});
+				}
+			};
+
+			plg.init();
+			$(window).on('scroll', function () {
+				setTimeout(function () {
+					plg.scroll($(this).scrollTop() + winHeightHalf);
+				}, 500);
+			}).on('resize load', function () {
+				plg.resize();
+			});
+
+			return plg;
+		});
+	};
+
+
 })(jQuery);
 $('.double-slider').doubleSlider();
+$('.sections-pagination').landingNavigation();
