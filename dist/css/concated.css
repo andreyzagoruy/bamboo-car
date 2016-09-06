@@ -101,6 +101,14 @@
   line-height: 28px;
   color: #353535; }
 
+.text-medium {
+  font-family: "FuturaPT";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #878787;
+  margin: 10px 0; }
+
 .text-light-medium {
   font-family: "FuturaPT";
   font-size: 16px;
@@ -488,7 +496,41 @@ section.section-services {
             color: #224991; }
 
 section.section-reviews {
-  min-height: 680px; }
+  font-size: 0;
+  letter-spacing: 0; }
+  section.section-reviews .background-text {
+    top: -50px;
+    left: 200px; }
+  section.section-reviews .text-main-heading {
+    width: 280px;
+    margin-bottom: 60px; }
+  section.section-reviews .column-left,
+  section.section-reviews .column-right {
+    position: relative;
+    font-size: 14px;
+    display: inline-block;
+    vertical-align: top;
+    width: 50%; }
+  section.section-reviews .column-left {
+    padding-left: 35px;
+    padding-right: 115px;
+    text-align: justify; }
+    section.section-reviews .column-left h5.text-medium {
+      color: #f93d41; }
+    section.section-reviews .column-left p.text-book-small {
+      line-height: 24px;
+      color: #878787; }
+  section.section-reviews .column-right {
+    padding-right: 40px; }
+    section.section-reviews .column-right .image-holder img {
+      width: 100%; }
+  section.section-reviews .avatar {
+    border-radius: 50%;
+    overflow: hidden;
+    height: 60px;
+    width: 60px; }
+    section.section-reviews .avatar img {
+      width: 100%; }
 
 section.section-consult {
   height: 540px;
@@ -918,6 +960,24 @@ section.section-consult {
           background-color: #ffffff; }
           section.section-services .container .content .list-content .text-section-services .button-order:hover span {
             color: #224991; }
+
+  section.section-reviews .avatar {
+    margin: 0 auto; }
+  section.section-reviews .container {
+    margin: 0; }
+    section.section-reviews .container .content {
+      text-align: center;
+      margin: 0;
+      padding: 40px 20px; }
+  section.section-reviews .text-main-heading {
+    width: 100%;
+    margin-bottom: 30px; }
+  section.section-reviews .column-left,
+  section.section-reviews .column-right {
+    width: 100%;
+    padding: 0; }
+  section.section-reviews .slider-holder.double-slider .column-left .content-holder {
+    text-align: center; }
 
   section.section-consult {
     height: auto; }
