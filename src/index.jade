@@ -12,8 +12,26 @@ html(lang = "ru")
         js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.7";
         fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
-  
-    .sections-pagination
+    section.navigation
+      .container
+        .content
+          .sections-pagination.text-center.text-vertical-align
+            a(class="pagination-link", href="#")
+              .pagination-default.pagination-active
+            a(class="pagination-link", href="#")
+              .pagination-default
+            a(class="pagination-link", href="#")
+              .pagination-default
+            a(class="pagination-link", href="#")
+              .pagination-default
+            a(class="pagination-link", href="#")
+              .pagination-default
+            a(class="pagination-link", href="#")
+              .pagination-default
+            a(class="pagination-link", href="#")
+              .pagination-default
+            a(class="pagination-link", href="#")
+              .pagination-default
     .modal-holder
       .modal-content
         a.close-modal

@@ -173,6 +173,34 @@ section {
   position: relative;
   overflow: hidden; }
 
+section.navigation {
+  z-index: 5;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; }
+  section.navigation .container {
+    height: 100vh; }
+    section.navigation .container .content {
+      height: 100vh;
+      margin: 0;
+      padding-left: 70px; }
+  section.navigation .sections-pagination {
+    width: 5px; }
+  section.navigation .pagination-link {
+    margin-bottom: 15px;
+    display: inline-block; }
+  section.navigation .pagination-default {
+    background-color: #878787;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%; }
+  section.navigation .pagination-active {
+    width: 5px;
+    height: 5px;
+    background-color: #f93d41; }
+
 .container {
   box-sizing: border-box;
   position: relative;
@@ -727,6 +755,9 @@ section.section-consult {
   .content {
     margin: 80px 0px 80px 60px; }
 
+  section.navigation .container .content {
+    padding-left: 30px; }
+
   section.section-main .container .content {
     width: 380px; }
 
@@ -793,6 +824,9 @@ section.section-consult {
 @media screen and (max-width: 755px) {
   .modal-content {
     width: 100%; }
+
+  section.navigation {
+    display: none; }
 
   .text-main-heading {
     font-size: 21px;

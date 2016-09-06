@@ -8,6 +8,34 @@ section
   position: relative
   overflow: hidden
 
+section.navigation
+  z-index: 5
+  position: fixed
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  .container
+    height: 100vh
+    .content
+      height: 100vh
+      margin: 0
+      padding-left: 70px
+  .sections-pagination
+    width: 5px
+  .pagination-link
+    margin-bottom: 15px
+    display: inline-block
+  .pagination-default
+    background-color: $color-main-grey
+    width: 3px
+    height: 3px
+    border-radius: 50%
+  .pagination-active
+    width: 5px
+    height: 5px
+    background-color: $color-main-red
+
 .container
   box-sizing: border-box
   position: relative
