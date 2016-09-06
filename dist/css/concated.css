@@ -185,7 +185,7 @@ section.navigation {
     section.navigation .container .content {
       height: 100vh;
       margin: 0;
-      padding-left: 70px; }
+      padding-left: 60px; }
   section.navigation .sections-pagination {
     width: 10px; }
   section.navigation .pagination-link {
@@ -759,7 +759,7 @@ section.section-consult {
     margin: 80px 0px 80px 60px; }
 
   section.navigation .container .content {
-    padding-left: 30px; }
+    padding-left: 20px; }
 
   section.section-main .container .content {
     width: 380px; }
