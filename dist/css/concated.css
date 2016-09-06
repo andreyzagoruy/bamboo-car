@@ -199,6 +199,9 @@ section.navigation {
     width: 3px;
     height: 3px;
     border-radius: 50%; }
+  section.navigation .pagination-link:hover .pagination-default {
+    width: 5px;
+    height: 5px; }
   section.navigation .pagination-active {
     width: 5px;
     height: 5px;
