@@ -175,7 +175,8 @@ section {
 
 section.navigation {
   z-index: 5;
-  position: fixed; }
+  position: fixed;
+  top: 0; }
   section.navigation .content {
     height: 100vh;
     margin: 0;
