@@ -175,16 +175,16 @@ section {
   overflow: hidden; }
 
 a.to-top-link {
-  z-index: 5;
+  z-index: 10;
   position: fixed;
   bottom: -5px;
   left: 160px;
-  left: calc((100vw - 1280px)/2 + 55px); }
+  left: calc((100vw - 1280px)/2 + 50px); }
   a.to-top-link .to-top-arrow {
     text-align: center;
     background-color: rgba(255, 255, 255, 0.1);
     height: 40px;
-    width: 30px;
+    width: 40px;
     border-radius: 5px; }
     a.to-top-link .to-top-arrow img {
       margin-top: 10px; }
@@ -714,7 +714,7 @@ section.section-consult {
     margin: 100px 0px 100px 110px; }
 
   a.to-top-link {
-    left: 40px; }
+    left: 35px; }
 
   section.navigation .content {
     padding-left: 45px; }
@@ -789,6 +789,8 @@ section.section-consult {
 
   a.to-top-link {
     left: 15px; }
+    a.to-top-link .to-top-arrow {
+      width: 30px; }
 
   section.navigation .content {
     padding-left: 20px; }
