@@ -586,7 +586,8 @@ $.fn.doubleSlider = function (opt) {
 			var DOM = {},
 				state = {},
 				array = [],
-				$self = $(this);
+				$self = $(this),
+				$toTop = $('.to-top-link');
 
 			// options
 			if (!opt) {
@@ -618,6 +619,12 @@ $.fn.doubleSlider = function (opt) {
 						DOM.$lnks.removeClass('pagination-active');
 						$el.addClass('pagination-active');
 						state.$active = $el;
+					}
+					if ($el !== array[0].$elem) {
+						$toTop.addClass('arrow-visible');
+					}
+					if ($el == array[0].$elem) {
+						$toTop.removeClass('arrow-visible');
 					}
 				},
 				resize: function () {

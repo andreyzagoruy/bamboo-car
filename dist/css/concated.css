@@ -177,9 +177,11 @@ section {
 a.to-top-link {
   z-index: 10;
   position: fixed;
-  bottom: -5px;
+  bottom: -45px;
   left: 160px;
-  left: calc((100vw - 1280px)/2 + 50px); }
+  left: calc((100vw - 1280px)/2 + 50px);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s; }
   a.to-top-link .to-top-arrow {
     text-align: center;
     background-color: rgba(255, 255, 255, 0.1);
@@ -188,6 +190,10 @@ a.to-top-link {
     border-radius: 5px; }
     a.to-top-link .to-top-arrow img {
       margin-top: 10px; }
+
+.arrow-visible {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%); }
 
 section.navigation {
   z-index: 5;
