@@ -12,6 +12,10 @@ html(lang = "ru")
         js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.7";
         fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
+
+    a(class="to-top-link", href="#")
+      .to-top-arrow
+        img(src="images/icons/up_arrow.png", alt="Go to top arrow", srcset="images/icons/up_arrow-2X.png 2x")
     section.navigation
       .content
         .sections-pagination.text-center.text-vertical-align
