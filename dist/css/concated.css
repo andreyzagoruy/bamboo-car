@@ -175,17 +175,12 @@ section {
 
 section.navigation {
   z-index: 5;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0; }
-  section.navigation .container {
-    height: 100vh; }
-    section.navigation .container .content {
-      height: 100vh;
-      margin: 0;
-      padding-left: 60px; }
+  position: fixed; }
+  section.navigation .content {
+    height: 100vh;
+    margin: 0;
+    padding-left: 160px;
+    padding-left: calc((100vw - 1280px)/2 + 60px); }
   section.navigation .sections-pagination {
     width: 10px; }
   section.navigation .pagination-link {
@@ -694,6 +689,9 @@ section.section-consult {
   .content {
     margin: 100px 0px 100px 110px; }
 
+  section.navigation .content {
+    padding-left: 45px; }
+
   section.section-laws .container .content .list-content .text-section-laws {
     width: 32%;
     margin: 0; }
@@ -762,7 +760,7 @@ section.section-consult {
   .content {
     margin: 80px 0px 80px 60px; }
 
-  section.navigation .container .content {
+  section.navigation .content {
     padding-left: 20px; }
 
   section.section-main .container .content {

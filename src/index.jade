@@ -13,18 +13,17 @@ html(lang = "ru")
         fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
     section.navigation
-      .container
-        .content
-          .sections-pagination.text-center.text-vertical-align
-            a(class="pagination-link", href="#id-main")
-            a(class="pagination-link", href="#id-laws")
-            a(class="pagination-link", href="#id-prices")
-            a(class="pagination-link", href="#id-advantages")
-            a(class="pagination-link", href="#id-how")
-            a(class="pagination-link", href="#id-services")
-            a(class="pagination-link", href="#id-reviews")
-            a(class="pagination-link", href="#id-consult")
-    .modal-holder
+      .content
+        .sections-pagination.text-center.text-vertical-align
+          a(class="pagination-link", href="#id-main")
+          a(class="pagination-link", href="#id-laws")
+          a(class="pagination-link", href="#id-prices")
+          a(class="pagination-link", href="#id-advantages")
+          a(class="pagination-link", href="#id-how")
+          a(class="pagination-link", href="#id-services")
+          a(class="pagination-link", href="#id-reviews")
+          a(class="pagination-link", href="#id-consult")
+    .modal-holder#callback-modal
       .modal-content
         a.close-modal
         h2.text-heavy-normal Снижение акциза на автомобили - на 90%
@@ -42,7 +41,7 @@ html(lang = "ru")
               img(src="images/icons/icon_phone.png", alt="Call us image", srcset="images/icons/icon_phone-2X.png 2x")
             .call-us-text.text-vertical-align  
               a(class="text-light-small", href='tel:+380934427800') +380 93 442 78 00
-          a(href="#")
+          a(href="#", data-modal="#callback-modal")
             .header-call-back.text-center
               p.text-bold-small.text-uppercase.text-vertical-align Обратный звонок
               

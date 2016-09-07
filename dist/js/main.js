@@ -1,5 +1,139 @@
 (function ($) {
 
+var $window = $(window),
+		winWidth = $window.width(),
+		winHeight = $window.height(),
+		animationPrefix = (function () {
+			var t,
+			el = document.createElement("fakeelement");
+			var transitions = {
+				"WebkitTransition": "webkitAnimationEnd",
+				"OTransition": "oAnimationEnd",
+				"MozTransition": "animationend",
+				"transition": "animationend"
+			};
+			for (t in transitions) {
+
+				if (el.style[t] !== undefined) {
+
+					return transitions[t];
+
+				}
+
+			}
+		})(),
+		transitionPrefix = (function () {
+			var t,
+			el = document.createElement("fakeelement");
+			var transitions = {
+				"WebkitTransition": "webkitTransitionEnd",
+				"transition": "transitionend",
+				"OTransition": "oTransitionEnd",
+				"MozTransition": "transitionend"
+			};
+			for (t in transitions) {
+
+				if (el.style[t] !== undefined) {
+
+					return transitions[t];
+
+				}
+
+			}
+		})(),
+		requestAnimFrame = window.requestAnimationFrame ||
+		window.webkitRequestAnimationFrame ||
+		window.mozRequestAnimationFrame    ||
+		window.oRequestAnimationFrame      ||
+		window.msRequestAnimationFrame     ||
+		function( callback ){
+			window.setTimeout( callback, 17 );
+		},
+		bodyOverflow = (function () {
+			var $body = $('body'),
+				$mainNavigation = $('.main-navigation');
+			return {
+				fixBody: function () {
+
+					$body
+						.addClass('fixed');
+
+				},
+				unfixBody: function () {
+
+					$body
+						.removeClass('fixed');
+
+				},
+				resize: function () {
+
+					this.unfixBody();
+
+				}.bind(this)
+			};
+		})(),
+		goUp = (function () {
+
+			var $el = $('#to-top'),
+				state = false,
+				speed = 900,
+				paused = false,
+				plg = {
+					up: function () {
+
+						paused = true;
+						state = true;
+
+						$("html, body").stop().animate({scrollTop:0}, speed, 'swing', function () {
+
+							paused = false;
+
+						}).one('touchstart mousewheel DOMMouseScroll wheel', function () {
+
+							$(this).stop(false, false).off('touchstart mousewheel DOMMouseScroll wheel');
+							paused = false;
+
+						});
+
+						plg.hide();
+
+					},
+					show: function () {
+
+						if (!state && !paused) {
+
+							$el.addClass('opened');
+
+							state = true;
+
+						}
+
+					},
+					hide: function () {
+
+						if (state) {
+
+							$el.removeClass('opened');
+
+							state = false;
+
+						}
+
+					},
+					$el: $el
+				};
+
+			$el.on('click', function () {
+
+				plg.up();
+
+			});
+
+			return plg;
+
+		})();
+
+
 $('.sections-pagination').find('.pagination-link').on('click', function (e) {
 	e.preventDefault();
 	$(this)
@@ -11,6 +145,178 @@ $('.sections-pagination').find('.pagination-link').on('click', function (e) {
 		$("html, body").stop().animate({scrollTop:$target.offset().top}, 600);
 	}
 });
+
+		// modals
+		var modals = (function () {
+
+			var plg;
+			$('[data-modal]').on('click', function (e) {
+				e.preventDefault();
+
+
+				var $self = $(this),
+					target = $self.attr('data-modal'),
+					$target = $(target);
+
+				if ( $self.hasClass('active') ) return;
+
+				if ($target.length) {
+					modals.openModal($target);
+				} else {
+					console.warn('Ошибка в элементе:');
+					console.log(this);
+					console.warn('Не найдены элементы с селектором ' + target);
+				}
+
+			});
+
+			$('[data-close]').on('click', function (e) {
+
+				e.preventDefault();
+
+				var $self = $(this),
+					target = $self.attr('data-close'),
+					$target;
+
+				if (target) {
+
+					$target = $(target);
+
+					if ($target.length) {
+
+						modals.closeModal( $target );
+
+					}
+
+				} else {
+
+					modals.closeModal( $self.closest('.opened') );
+
+				}
+
+			});
+
+			$('.modal-holder').not('.fake').on('click', function (e) {
+
+				if (e.target === this && winWidth > 1000 ) {
+
+					modals.closeModal( $(this) );
+
+				}
+
+			});
+
+			$window.on('keyup', function (e) {
+
+				// esc pressed
+				if (e.keyCode == '27') {
+
+					modals.closeModal();
+
+				}
+
+			});
+			plg = {
+				opened: [],
+				openModal: function ( $modal ) {
+
+					if (!$modal.data('modal-ununique') && this.opened.length > 0) {
+						modals.closeModal( this.opened[this.opened.length - 1], true );
+					}
+					this.opened.push( $modal );
+					// $modal.addClass('opened').one( transitionPrefix, bodyOverflow.fixBody );
+
+					$modal.off( transitionPrefix ).addClass('opened');
+					bodyOverflow.fixBody();
+
+					this.$cross = $('<div>').addClass('cross-top-fixed animated ' + $modal.attr('data-cross') ).one('click', function () {
+
+						modals.closeModal();
+
+					}).one(animationPrefix, function () {
+
+						$(this).removeClass( 'animated' );
+
+					}).appendTo('body');
+
+				},
+				closeModal: function ($modal, alt) {
+
+					if ( this.opened.length === 0 && !$modal ) {
+
+						return;
+
+					} else if ( this.opened.length > 0 && !$modal ) {
+
+						for ( var y = 0; y < this.opened.length; y++ ) {
+
+							this.closeModal( this.opened[y] );
+
+						}
+
+						return;
+
+					} else if ( $modal && !($modal instanceof jQuery) ) {
+
+						$modal = $( $modal );
+
+					} else if ( $modal === undefined ) {
+
+						throw 'something went wrong';
+
+					}
+
+					try {
+
+						$modal.removeClass('opened');
+
+						// stop YouTube modal video
+						if( $modal.attr('id') === 'main-video-modal' && getleaf.video) getleaf.video.pauseVideo();
+
+					} catch (e) {
+
+						console.error(e);
+
+						this.closeModal();
+
+						return;
+
+					}
+
+					this.opened.pop();
+
+					if (!alt) {
+
+						$modal.one( transitionPrefix, bodyOverflow.unfixBody );
+
+						try {
+
+							this.$cross.addClass('fadeOut').one(animationPrefix, function () {
+
+								$(this).remove();
+
+							});
+
+						} catch (e) {
+
+							console.error(e);
+
+						}
+
+					} else {
+
+						this.$cross.remove();
+
+					}
+
+				}
+
+			};
+
+			return plg;
+		})();
+
+
 
 $.fn.doubleSlider = function (opt) {
 
