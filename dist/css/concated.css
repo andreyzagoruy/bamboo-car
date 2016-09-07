@@ -246,7 +246,13 @@ section.navigation {
   position: absolute; }
 
 .header-top {
-  font-size: 0; }
+  font-size: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  z-index: 5; }
   .header-top .container {
     padding: 18px 55px; }
     .header-top .container .header-logo {
@@ -274,6 +280,7 @@ section.navigation {
       border: 3px solid #f93d41; }
 
 section.section-main {
+  margin-top: 85px;
   min-height: 555px; }
   section.section-main .container .background-text {
     top: 70px;
