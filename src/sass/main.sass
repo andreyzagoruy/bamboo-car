@@ -8,6 +8,17 @@ section
   position: relative
   overflow: hidden
 
+input, select
+  appearance: none
+  text-indent: 10px
+  margin: 10px
+  background: $color-input
+  border: none
+  width: 215px
+  height: 40px
+select
+  background: $color-input url("../images/icons/select_arrow.png") 190px 20px no-repeat
+
 a.to-top-link
   z-index: 10
   position: fixed
@@ -138,7 +149,7 @@ section.navigation
       border: 3px solid $color-main-red
 
 section.section-main
-  margin-top: 85px
+  padding-top: 85px
   min-height: 555px
   .container
     .background-text
@@ -169,7 +180,7 @@ section.section-laws
         margin-top: 60px
         .text-section-laws
           display: inline-block
-          padding-bottom: 55px
+          padding-bottom: 45px
           width: 230px
           margin-right: 155px
           vertical-align: top
@@ -482,16 +493,6 @@ section.section-consult
         .form-consult
           margin-top: 30px
           margin-left: 80px
-          input, select
-            appearance: none
-            text-indent: 10px
-            margin: 10px
-            background: $color-input
-            border: none
-            width: 215px
-            height: 40px
-          select
-            background: $color-input url("../images/icons/select_arrow.png") 190px 20px no-repeat
           .text-book-small
             color: $color-main-white
           ::placeholder

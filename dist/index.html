@@ -35,10 +35,20 @@
         <div class="sections-pagination text-center text-vertical-align"><a href="#id-main" class="pagination-link"></a><a href="#id-laws" class="pagination-link"></a><a href="#id-prices" class="pagination-link"></a><a href="#id-advantages" class="pagination-link"></a><a href="#id-how" class="pagination-link"></a><a href="#id-services" class="pagination-link"></a><a href="#id-reviews" class="pagination-link"></a><a href="#id-consult" class="pagination-link"></a></div>
       </div>
     </section>
-    <div id="callback-modal" class="modal-holder">
+    <div id="akciz-lower-modal" class="modal-holder">
       <div class="modal-content"><a class="close-modal"></a>
         <h2 class="text-heavy-normal">Снижение акциза на автомобили - на 90%</h2>
         <p class="text-book-small">Размер акциза зависит от трёх показателей: обьем двигателя, тип авто и его возраст. Чтобы понимать насколько снизился акциз, нужно в нашей инографике (ссылка на нашу картинку) выбрать категорию авто и соответствую ставку, и умножить эту цифру на количество кубических сантиметров рабочего обьема цилиндра. Ставка расчитывается в евро</p><img src="images/content/modal-img.jpg">
+      </div>
+    </div>
+    <div id="call-back-modal" class="modal-holder">
+      <div class="modal-content modal-input"><a class="close-modal"></a>
+        <h2 class="text-heavy-normal">Обратный звонок</h2>
+        <form>
+          <input type="text" placeholder="Имя" name="name" class="text-book-small">
+          <input type="text" placeholder="Телефон" name="phone" class="text-book-small">
+          <input type="submit" placeholder="ОТПРАВИТЬ" name="submit" class="text-heavy-small form-modal-submit">
+        </form>
       </div>
     </div>
     <header class="header-top">
@@ -50,7 +60,7 @@
           <div class="header-call-us">
             <div class="call-us-icon text-vertical-align"><img src="images/icons/icon_phone.png" alt="Call us image" srcset="images/icons/icon_phone-2X.png 2x"></div>
             <div class="call-us-text text-vertical-align"> <a href="tel:+380934427800" class="text-light-small">+380 93 442 78 00</a></div>
-          </div><a href="#" data-modal="#callback-modal">
+          </div><a href="#" data-modal="#call-back-modal">
             <div class="header-call-back text-center">
               <p class="text-bold-small text-uppercase text-vertical-align">Обратный звонок</p>
             </div></a>
@@ -75,7 +85,7 @@
             <ul class="list-content">
               <li class="text-section-laws">
                 <div class="list-item list-item-big">
-                  <div class="list-index text-heavy-big"><span>1</span></div><span class="list-text">Снижение акциза на автомобили - на 90%</span><a href="#" class="list-link text-book-small">Читать далее</a>
+                  <div class="list-index text-heavy-big"><span>1</span></div><span class="list-text">Снижение акциза на автомобили - на 90%</span><a href="#" data-modal="#akciz-lower-modal" class="list-link text-book-small">Читать далее</a>
                 </div>
               </li>
               <li class="text-section-laws">

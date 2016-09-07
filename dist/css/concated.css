@@ -129,12 +129,13 @@
   top: -34px;
   right: 0;
   height: 19px;
-  width: 19px;
-  pointer-events: none; }
+  width: 19px; }
 
 .modal-holder {
   background: rgba(255, 255, 255, 0.9);
   opacity: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
   position: fixed;
   top: 0;
   left: 0;
@@ -149,13 +150,19 @@
     opacity: 1;
     visibility: visible; }
 
+.opened .modal-content {
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%); }
+
 .modal-content {
   padding: 50px 30px;
   position: absolute;
   left: 50%;
   top: 50%;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-          transform: translateX(-50%) translateY(-50%);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-transform: translateX(-50%) translateY(calc(-50% + 50px));
+          transform: translateX(-50%) translateY(calc(-50% + 50px));
   background-color: #ffffff;
   box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.15);
   width: 615px; }
@@ -163,6 +170,36 @@
     width: 100%; }
   .modal-content .text-book-small {
     line-height: 24px; }
+
+.modal-input {
+  background-color: #224991;
+  width: auto; }
+  .modal-input form {
+    width: 235px;
+    padding-top: 30px;
+    text-align: center; }
+  .modal-input .text-heavy-normal {
+    color: #ffffff;
+    width: 100%;
+    text-align: center; }
+  .modal-input .text-book-small {
+    color: #ffffff; }
+  .modal-input ::-webkit-input-placeholder {
+    color: #ffffff; }
+  .modal-input ::-moz-placeholder {
+    color: #ffffff; }
+  .modal-input :-ms-input-placeholder {
+    color: #ffffff; }
+  .modal-input ::placeholder {
+    color: #ffffff; }
+  .modal-input .form-modal-submit {
+    text-indent: 0;
+    color: #224991;
+    background: #ffffff; }
+  .modal-input .form-modal-submit:hover {
+    color: #ffffff;
+    background: #224991;
+    border: 3px solid #ffffff; }
 
 * {
   box-sizing: border-box; }
@@ -173,6 +210,20 @@ a {
 section {
   position: relative;
   overflow: hidden; }
+
+input, select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  text-indent: 10px;
+  margin: 10px;
+  background: #28519d;
+  border: none;
+  width: 215px;
+  height: 40px; }
+
+select {
+  background: #28519d url("../images/icons/select_arrow.png") 190px 20px no-repeat; }
 
 a.to-top-link {
   z-index: 10;
@@ -306,7 +357,7 @@ section.navigation {
       border: 3px solid #f93d41; }
 
 section.section-main {
-  margin-top: 85px;
+  padding-top: 85px;
   min-height: 555px; }
   section.section-main .container .background-text {
     top: 70px;
@@ -335,7 +386,7 @@ section.section-laws {
       margin-top: 60px; }
       section.section-laws .container .content .list-content .text-section-laws {
         display: inline-block;
-        padding-bottom: 55px;
+        padding-bottom: 45px;
         width: 230px;
         margin-right: 155px;
         vertical-align: top; }
@@ -635,18 +686,6 @@ section.section-consult {
         section.section-consult .container .content .column-left .form-consult {
           margin-top: 30px;
           margin-left: 80px; }
-          section.section-consult .container .content .column-left .form-consult input, section.section-consult .container .content .column-left .form-consult select {
-            -webkit-appearance: none;
-               -moz-appearance: none;
-                    appearance: none;
-            text-indent: 10px;
-            margin: 10px;
-            background: #28519d;
-            border: none;
-            width: 215px;
-            height: 40px; }
-          section.section-consult .container .content .column-left .form-consult select {
-            background: #28519d url("../images/icons/select_arrow.png") 190px 20px no-repeat; }
           section.section-consult .container .content .column-left .form-consult .text-book-small {
             color: #ffffff; }
           section.section-consult .container .content .column-left .form-consult ::-webkit-input-placeholder {
@@ -868,8 +907,22 @@ section.section-consult {
     section.section-services .container .content .list-content .text-section-services .list-item-big .list-index {
       display: none; } }
 @media screen and (max-width: 755px) {
+  input, select {
+    margin: 0px;
+    margin-bottom: 5px;
+    width: 100%;
+    height: 40px; }
+
+  select {
+    background-position: 93% 20px; }
+
   .modal-content {
     width: 100%; }
+
+  .modal-input {
+    width: 100%; }
+    .modal-input form {
+      width: 100%; }
 
   a.to-top-link {
     display: none; }
@@ -1087,13 +1140,6 @@ section.section-consult {
                 left: 50%;
                 -webkit-transform: translateX(-50%);
                         transform: translateX(-50%); }
-            section.section-consult .container .content .column-left .form-consult input, section.section-consult .container .content .column-left .form-consult select {
-              margin: 0px;
-              margin-bottom: 5px;
-              width: 100%;
-              height: 40px; }
-            section.section-consult .container .content .column-left .form-consult select {
-              background-position: 93% 20px; }
     section.section-consult .left-side {
       display: none; }
 

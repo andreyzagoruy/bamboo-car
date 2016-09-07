@@ -27,12 +27,20 @@ html(lang = "ru")
           a(class="pagination-link", href="#id-services")
           a(class="pagination-link", href="#id-reviews")
           a(class="pagination-link", href="#id-consult")
-    .modal-holder#callback-modal
+    .modal-holder#akciz-lower-modal
       .modal-content
         a.close-modal
         h2.text-heavy-normal Снижение акциза на автомобили - на 90%
         p.text-book-small Размер акциза зависит от трёх показателей: обьем двигателя, тип авто и его возраст. Чтобы понимать насколько снизился акциз, нужно в нашей инографике (ссылка на нашу картинку) выбрать категорию авто и соответствую ставку, и умножить эту цифру на количество кубических сантиметров рабочего обьема цилиндра. Ставка расчитывается в евро
         img(src="images/content/modal-img.jpg")
+    .modal-holder#call-back-modal
+      .modal-content.modal-input
+        a.close-modal
+        h2.text-heavy-normal Обратный звонок
+        form
+          input(class="text-book-small", type="text", placeholder="Имя", name="name")
+          input(class="text-book-small", type="text", placeholder="Телефон", name="phone")  
+          input(class="text-heavy-small form-modal-submit", type="submit", placeholder="ОТПРАВИТЬ", name="submit")
     header.header-top
       .container
         .column-left
@@ -45,7 +53,7 @@ html(lang = "ru")
               img(src="images/icons/icon_phone.png", alt="Call us image", srcset="images/icons/icon_phone-2X.png 2x")
             .call-us-text.text-vertical-align  
               a(class="text-light-small", href='tel:+380934427800') +380 93 442 78 00
-          a(href="#", data-modal="#callback-modal")
+          a(href="#", data-modal="#call-back-modal")
             .header-call-back.text-center
               p.text-bold-small.text-uppercase.text-vertical-align Обратный звонок
               
@@ -72,7 +80,7 @@ html(lang = "ru")
                   .list-index.text-heavy-big
                     span 1
                   span.list-text Снижение акциза на автомобили - на 90%
-                  a(class="list-link text-book-small", href="#") Читать далее
+                  a(class="list-link text-book-small", href="#", data-modal="#akciz-lower-modal") Читать далее
               li.text-section-laws
                 .list-item.list-item-big
                   .list-index.text-heavy-big
