@@ -41,6 +41,12 @@
         <p class="text-book-small">Размер акциза зависит от трёх показателей: обьем двигателя, тип авто и его возраст. Чтобы понимать насколько снизился акциз, нужно в нашей инографике (ссылка на нашу картинку) выбрать категорию авто и соответствую ставку, и умножить эту цифру на количество кубических сантиметров рабочего обьема цилиндра. Ставка расчитывается в евро</p><img src="images/content/modal-img.jpg">
       </div>
     </div>
+    <div id="taxes-lower-modal" class="modal-holder">
+      <div class="modal-content"><a class="close-modal"></a>
+        <h2 class="text-heavy-normal">Снижение ставок таможенной пошлины - с 10% до 9.1%</h2>
+        <p class="text-book-small">На б/у авто из Европы действует сниженая ставка 9,1% (в 2017 - 8,2%, в 2018 - 7,3%). На все остальные авто из заграницы пошлина 10%. График снижения пошлины:</p><img src="images/content/modal2-img.png">
+      </div>
+    </div>
     <div id="call-back-modal" class="modal-holder">
       <div class="modal-content modal-input"><a class="close-modal"></a>
         <h2 class="text-heavy-normal">Обратный звонок</h2>
@@ -90,7 +96,7 @@
               </li>
               <li class="text-section-laws">
                 <div class="list-item list-item-big">
-                  <div class="list-index text-heavy-big"><span>2</span></div><span class="list-text">Снижение ставок таможенной пошлины - с 10% до 9.1%</span><a href="#" class="list-link text-book-small">Читать далее</a>
+                  <div class="list-index text-heavy-big"><span>2</span></div><span class="list-text">Снижение ставок таможенной пошлины - с 10% до 9.1%</span><a href="#" data-modal="#taxes-lower-modal" class="list-link text-book-small">Читать далее</a>
                 </div>
               </li>
               <li class="text-section-laws">
@@ -376,6 +382,8 @@
                 <input type="text" placeholder="Email" name="email" class="text-book-small">
                 <select name="country" class="text-book-small">
                   <option value="initial">Выберите страну</option>
+                  <option value="country-gr">Германия</option>
+                  <option value="country-pl">Польша</option>
                 </select>
               </div>
               <div class="form-consult-bottom"><span class="form-label text-bold-small text-uppercase">машина</span>

@@ -33,6 +33,12 @@ html(lang = "ru")
         h2.text-heavy-normal Снижение акциза на автомобили - на 90%
         p.text-book-small Размер акциза зависит от трёх показателей: обьем двигателя, тип авто и его возраст. Чтобы понимать насколько снизился акциз, нужно в нашей инографике (ссылка на нашу картинку) выбрать категорию авто и соответствую ставку, и умножить эту цифру на количество кубических сантиметров рабочего обьема цилиндра. Ставка расчитывается в евро
         img(src="images/content/modal-img.jpg")
+    .modal-holder#taxes-lower-modal
+      .modal-content
+        a.close-modal
+        h2.text-heavy-normal Снижение ставок таможенной пошлины - с 10% до 9.1%
+        p.text-book-small На б/у авто из Европы действует сниженая ставка 9,1% (в 2017 - 8,2%, в 2018 - 7,3%). На все остальные авто из заграницы пошлина 10%. График снижения пошлины:
+        img(src="images/content/modal2-img.png")
     .modal-holder#call-back-modal
       .modal-content.modal-input
         a.close-modal
@@ -86,7 +92,7 @@ html(lang = "ru")
                   .list-index.text-heavy-big
                     span 2
                   span.list-text Снижение ставок таможенной пошлины - с 10% до 9.1%
-                  a(class="list-link text-book-small", href="#") Читать далее
+                  a(class="list-link text-book-small", href="#", data-modal="#taxes-lower-modal") Читать далее
               li.text-section-laws
                 .list-item.list-item-small
                   .list-index.text-heavy-big
@@ -349,6 +355,8 @@ html(lang = "ru")
                 input(class="text-book-small", type="text", placeholder="Email", name="email")
                 select(class="text-book-small", name="country")
                   option(value="initial") Выберите страну
+                  option(value="country-gr") Германия
+                  option(value="country-pl") Польша
               .form-consult-bottom
                 span.form-label.text-bold-small.text-uppercase машина
                 select(class="text-book-small", name="type")
