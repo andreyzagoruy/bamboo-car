@@ -205,12 +205,21 @@
 * {
   box-sizing: border-box; }
 
+body {
+  position: static; }
+
 a {
   text-decoration: none; }
 
 section {
   position: relative;
   overflow: hidden; }
+
+.fixed {
+  overflow: hidden;
+  right: 0;
+  left: 0;
+  position: fixed; }
 
 input, select {
   -webkit-appearance: none;

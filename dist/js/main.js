@@ -51,18 +51,59 @@ var $window = $(window),
 		},
 		bodyOverflow = (function () {
 			var $body = $('body'),
+				scrollPosition,
 				$mainNavigation = $('.main-navigation');
 			return {
 				fixBody: function () {
 
-					$body
-						.addClass('fixed');
+					scrollPosition = $body.scrollTop();
+					$body.addClass('fixed')
+								.css({
+									'top': -1 * scrollPosition
+								});
 
+				},
+				getScrollWidth: function () {
+					if (typeof this.scrollWidth === 'number') return this.scrollWidth;
+					var inner = document.createElement('p');
+				  inner.style.width = "100%";
+				  inner.style.height = "200px";
+
+				  var outer = document.createElement('div');
+				  outer.style.position = "absolute";
+				  outer.style.top = "0px";
+				  outer.style.left = "0px";
+				  outer.style.visibility = "hidden";
+				  outer.style.width = "200px";
+				  outer.style.height = "150px";
+				  outer.style.overflow = "hidden";
+				  outer.appendChild (inner);
+
+				  document.body.appendChild (outer);
+				  var w1 = inner.offsetWidth;
+				  outer.style.overflow = 'scroll';
+				  var w2 = inner.offsetWidth;
+				  if (w1 == w2) w2 = outer.clientWidth;
+
+				  document.body.removeChild (outer);
+					this.scrollWidth = (w1 - w2);
+					this.generateClassStyles(this.scrollWidth)
+				  return this.scrollWidth;
+				},
+				generateClassStyles: function () {
+					var styles,
+						$style = $('<style>');
+					styles = 'body.fixed, body.fixed .header-top {' +
+						'right:' + scrollWidth + 'px;' +
+					'}'
+					$style.html(styles);
+					$('body').append($style);
 				},
 				unfixBody: function () {
 
 					$body
-						.removeClass('fixed');
+						.removeClass('fixed')
+						.scrollTop(scrollPosition);
 
 				},
 				resize: function () {
@@ -196,9 +237,9 @@ $('.sections-pagination').find('.pagination-link').on('click', function (e) {
 
 			});
 
-			$('.modal-holder').not('.fake').on('click', function (e) {
+			$('.modal-holder').on('click', function (e) {
 
-				if (e.target === this && winWidth > 1000 ) {
+				if (e.target === this) {
 
 					modals.closeModal( $(this) );
 
