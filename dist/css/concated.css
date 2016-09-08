@@ -129,7 +129,8 @@
   top: -34px;
   right: 0;
   height: 19px;
-  width: 19px; }
+  width: 19px;
+  pointer-events: none; }
 
 .modal-holder {
   background: rgba(255, 255, 255, 0.9);
