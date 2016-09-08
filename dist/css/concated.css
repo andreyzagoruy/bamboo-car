@@ -952,6 +952,7 @@ section.section-consult {
       display: none; }
 
   section.section-main {
+    padding-top: 45px;
     min-height: 130px; }
     section.section-main .container {
       text-align: center; }
@@ -1149,6 +1150,9 @@ section.section-consult {
   .footer-bottom {
     display: none; } }
 @media screen and (max-width: 310px) {
+  section.section-main {
+    padding-top: 75px; }
+
   .header-top .container .column-left {
     width: 100%;
     text-align: center; }
