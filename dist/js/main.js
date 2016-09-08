@@ -55,7 +55,7 @@ var $window = $(window),
 				$mainNavigation = $('.main-navigation');
 			return {
 				fixBody: function () {
-
+					this.getScrollWidth();
 					scrollPosition = $body.scrollTop();
 					$body.addClass('fixed')
 								.css({
@@ -87,17 +87,17 @@ var $window = $(window),
 
 				  document.body.removeChild (outer);
 					this.scrollWidth = (w1 - w2);
-					this.generateClassStyles(this.scrollWidth)
+					this.generateClassStyles(this.scrollWidth);
 				  return this.scrollWidth;
 				},
-				generateClassStyles: function () {
+				generateClassStyles: function (scrollWidth) {
 					var styles,
 						$style = $('<style>');
 					styles = 'body.fixed, body.fixed .header-top {' +
 						'right:' + scrollWidth + 'px;' +
 					'}'
 					$style.html(styles);
-					$('body').append($style);
+					$style.appendTo($body);
 				},
 				unfixBody: function () {
 
