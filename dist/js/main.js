@@ -1,6 +1,7 @@
 (function ($) {
 
 var $window = $(window),
+		isModalOpened = false, // <-------- AZ
 		winWidth = $window.width(),
 		winHeight = $window.height(),
 		animationPrefix = (function () {
@@ -193,7 +194,7 @@ $('.sections-pagination').find('.pagination-link').on('click', function (e) {
 			var plg;
 			$('[data-modal]').on('click', function (e) {
 				e.preventDefault();
-
+				isModalOpened = true; // <--------- AZ
 
 				var $self = $(this),
 					target = $self.attr('data-modal'),
@@ -214,7 +215,7 @@ $('.sections-pagination').find('.pagination-link').on('click', function (e) {
 			$('[data-close]').on('click', function (e) {
 
 				e.preventDefault();
-
+				isModalOpened = false; // <------- AZ
 				var $self = $(this),
 					target = $self.attr('data-close'),
 					$target;
@@ -240,7 +241,7 @@ $('.sections-pagination').find('.pagination-link').on('click', function (e) {
 			$('.modal-holder').on('click', function (e) {
 
 				if (e.target === this) {
-
+					isModalOpened = false; // <-------- AZ
 					modals.closeModal( $(this) );
 
 				}
@@ -646,12 +647,14 @@ $.fn.doubleSlider = function (opt) {
 					plg.resize();
 				},
 				scroll: function (top) {
-					for (var y = 0; y < array.length; y++) {
-						if (top < array[y].val && y) {
-							plg.avtive(array[y - 1].$elem);
-							return;
-						} else if (y == array.length - 1) {
-							plg.avtive(array[y].$elem);
+					if (!isModalOpened) { // <------- AZ
+						for (var y = 0; y < array.length; y++) {
+							if (top < array[y].val && y) {
+								plg.avtive(array[y - 1].$elem);
+								return;
+							} else if (y == array.length - 1) {
+								plg.avtive(array[y].$elem);
+							}
 						}
 					}
 				},
