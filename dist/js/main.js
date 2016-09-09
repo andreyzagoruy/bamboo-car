@@ -212,7 +212,7 @@ $('.sections-pagination').find('.pagination-link').on('click', function (e) {
 
 			});
 
-			$('[data-close]').on('click', function (e) {
+			$('.close-modal').on('click', function (e) {
 
 				e.preventDefault();
 				isModalOpened = false; // <------- AZ
@@ -270,7 +270,7 @@ $('.sections-pagination').find('.pagination-link').on('click', function (e) {
 
 					$modal.off( transitionPrefix ).addClass('opened');
 					bodyOverflow.fixBody();
-
+/*
 					this.$cross = $('<div>').addClass('cross-top-fixed animated ' + $modal.attr('data-cross') ).one('click', function () {
 
 						modals.closeModal();
@@ -279,7 +279,7 @@ $('.sections-pagination').find('.pagination-link').on('click', function (e) {
 
 						$(this).removeClass( 'animated' );
 
-					}).appendTo('body');
+					}).appendTo('body'); */
 
 				},
 				closeModal: function ($modal, alt) {
@@ -333,11 +333,11 @@ $('.sections-pagination').find('.pagination-link').on('click', function (e) {
 
 						try {
 
-							this.$cross.addClass('fadeOut').one(animationPrefix, function () {
-
-								$(this).remove();
-
-							});
+							// this.$cross.addClass('fadeOut').one(animationPrefix, function () {
+							//
+							// 	$(this).remove();
+							//
+							// });
 
 						} catch (e) {
 
