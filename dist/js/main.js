@@ -184,7 +184,7 @@ $('.sections-pagination').find('.pagination-link').on('click', function (e) {
 		.removeClass('pagination-active');
 	var $target = $( $( this ).attr('href') );
 	if ($target.length) {
-		$("html, body").stop().animate({scrollTop:$target.offset().top}, 600);
+		$("html, body").stop().animate({scrollTop:$target.offset().top - 85}, 600);
 	}
 });
 
@@ -683,11 +683,15 @@ $.fn.doubleSlider = function (opt) {
 			};
 
 			plg.init();
+			$(window).on('load', function () {	//<-------- AZ
+				plg.scroll($(this).scrollTop() + winHeightHalf);
+				plg.resize();
+			});
 			$(window).on('scroll', function () {
 				setTimeout(function () {
 					plg.scroll($(this).scrollTop() + winHeightHalf);
 				}, 500);
-			}).on('resize load', function () {
+			}).on('resize', function () {
 				plg.resize();
 			});
 
