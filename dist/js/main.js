@@ -440,7 +440,7 @@ $.fn.doubleSlider = function (opt) {
 
 				$('<span>')
 					.addClass( opt.prevSlideClass )
-					.html(opt.prevSlideHtml)
+				//	.html(opt.prevSlideHtml)
 					.appendTo( DOM.$pagination );
 
 				$pagesList = $('<ul>')
@@ -455,9 +455,9 @@ $.fn.doubleSlider = function (opt) {
 						.appendTo( $pagesList );
 				}
 
-				$('<span>')
+				$('<div>')
 					.addClass( opt.nextSlideClass )
-					.html(opt.nextSlideHtml)
+					//.html(opt.nextSlideHtml)
 					.appendTo( DOM.$pagination );
 				DOM.$pagination.appendTo($slider);
 			},

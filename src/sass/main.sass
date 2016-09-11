@@ -1,3 +1,29 @@
+@keyframes slideIn
+  from
+    transform: translateY(40px) rotateY(-30deg)
+    opacity: 0
+  to
+    transform: translateY(0) rotateY(0deg)
+    opacity: 1
+@keyframes slideOut
+  from
+    opacity: 1
+    transform: translateY(0) rotateY(0deg)
+  to
+    opacity: 0
+    transform: translateY(-40px) rotateY(30deg)
+
+@keyframes fadeIn
+  from
+    opacity: 0
+  to
+    opacity: 1
+@keyframes fadeOut
+  from
+    opacity: 1
+  to
+    opacity: 0
+
 *
   box-sizing: border-box
 
@@ -425,6 +451,57 @@ section.section-services
 
 section.section-reviews
   // min-height: 680px
+  perspective: 500px
+  .pagination
+    font-family: 'FuturaPT'
+    font-weight: 700
+    line-height: 40px
+    font-size: 10px
+    margin-left: 35px
+    ul
+      display: inline-block
+      vertical-align: middle
+      margin: 0 6px
+      padding: 0
+    li
+      display: inline-block
+      cursor: pointer
+      vertical-align: middle
+      margin: 0 6px
+      padding: 4px
+    .next-slide
+      background: url("../images/icons/slider_arrow_right.png") 0 0 no-repeat
+      display: inline-block
+      height: 6px
+      width: 40px
+      cursor: pointer
+    .prev-slide
+      background: url("../images/icons/slider_arrow_left.png") 0 0 no-repeat
+      display: inline-block
+      height: 6px
+      width: 40px
+      cursor: pointer
+  .slide
+    display: none
+    left: 0
+    top: 0
+    transform-origin: 0 0
+    &.active
+      display: block
+  .fadeIn
+    animation: fadeIn 0.6s
+    animation-fill-mode: both
+    position: absolute
+    z-index: 1
+  .fadeOut
+    animation: fadeOut 0.6s
+    animation-fill-mode: both
+    z-index: 0
+  .image-holder
+    &.fadeIn
+      animation-name: slideIn
+    &.fadeOut
+      animation-name: slideOut
   .background-text
     top: -50px
     left: 200px
