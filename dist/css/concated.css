@@ -59,7 +59,7 @@
   font-weight: 800;
   opacity: 0.1; }
 
-.text-heavy-small, section.section-prices .table-holder table th {
+.text-heavy-small, section.section-prices .table-holder table td {
   font-family: "FuturaPT";
   font-size: 14px;
   font-weight: 800; }
@@ -289,7 +289,7 @@ input, select {
   height: 40px; }
 
 select {
-  background: #28519d url("../images/icons/select_arrow.png") 190px 20px no-repeat; }
+  background: #28519d url("../images/icons/select_arrow.png") right 16px bottom 18px no-repeat; }
 
 a.to-top-link {
   z-index: 10;
@@ -491,22 +491,22 @@ section.section-prices .table-holder {
       display: inline-block;
       padding-bottom: 10px;
       border-bottom: #ebebeb solid 1px; }
-    section.section-prices .table-holder table thead th {
+    section.section-prices .table-holder table thead td {
       font-weight: 300;
       padding-right: 65px; }
-      section.section-prices .table-holder table thead th:nth-child(1) {
+      section.section-prices .table-holder table thead td:nth-child(1) {
         font-size: 16px;
         font-weight: 800; }
-      section.section-prices .table-holder table thead th:nth-child(3) {
+      section.section-prices .table-holder table thead td:nth-child(3) {
         padding-right: 0; }
     section.section-prices .table-holder table tbody {
       margin-top: 10px; }
-      section.section-prices .table-holder table tbody th:nth-child(1) {
+      section.section-prices .table-holder table tbody td:nth-child(1) {
         font-weight: 300; }
-      section.section-prices .table-holder table tbody tr:last-of-type th {
+      section.section-prices .table-holder table tbody tr:last-of-type td {
         font-weight: 800;
         color: #f93d41; }
-        section.section-prices .table-holder table tbody tr:last-of-type th:nth-child(2) {
+        section.section-prices .table-holder table tbody tr:last-of-type td:nth-child(2) {
           color: #224991; }
     section.section-prices .table-holder table tfoot {
       padding-top: 20px;
@@ -517,26 +517,26 @@ section.section-prices .table-holder {
       display: block;
       padding-bottom: 10px;
       white-space: nowrap; }
-    section.section-prices .table-holder table th {
+    section.section-prices .table-holder table td {
       display: inline-block;
       position: relative;
       line-height: 1.2em;
       vertical-align: top;
       white-space: normal; }
-      section.section-prices .table-holder table th:nth-child(1) {
+      section.section-prices .table-holder table td:nth-child(1) {
         width: 240px; }
-      section.section-prices .table-holder table th:nth-child(2) {
+      section.section-prices .table-holder table td:nth-child(2) {
         width: 150px; }
-      section.section-prices .table-holder table th:nth-child(3) {
+      section.section-prices .table-holder table td:nth-child(3) {
         width: 84px; }
-      section.section-prices .table-holder table th .economy-price-holder {
+      section.section-prices .table-holder table td .economy-price-holder {
         position: absolute;
         top: -21px;
         left: 140%;
         border-top: #ebebeb solid 1px;
         width: 680px;
         width: 35vw; }
-        section.section-prices .table-holder table th .economy-price-holder .economy-price-content {
+        section.section-prices .table-holder table td .economy-price-holder .economy-price-content {
           display: inline-block;
           position: relative;
           background-color: #f93d41;
@@ -547,7 +547,7 @@ section.section-prices .table-holder {
           height: 160px;
           -webkit-transform: translateY(-50%);
                   transform: translateY(-50%); }
-          section.section-prices .table-holder table th .economy-price-holder .economy-price-content::after {
+          section.section-prices .table-holder table td .economy-price-holder .economy-price-content::after {
             content: "";
             position: absolute;
             top: -10px;
@@ -700,14 +700,16 @@ section.section-reviews {
     section.section-reviews .pagination .next-slide {
       background: url("../images/icons/slider_arrow_right.png") 0 0 no-repeat;
       display: inline-block;
-      height: 6px;
+      height: 7px;
       width: 40px;
+      vertical-align: middle;
       cursor: pointer; }
     section.section-reviews .pagination .prev-slide {
       background: url("../images/icons/slider_arrow_left.png") 0 0 no-repeat;
       display: inline-block;
-      height: 6px;
+      height: 7px;
       width: 40px;
+      vertical-align: middle;
       cursor: pointer; }
   section.section-reviews .slide {
     display: none;
@@ -1040,9 +1042,6 @@ section.section-consult {
     width: 100%;
     height: 40px; }
 
-  select {
-    background-position: 93% 20px; }
-
   .modal-holder a.close-modal, .modal-holder .close-modal {
     top: 15px;
     right: 10px; }
@@ -1280,7 +1279,26 @@ section.section-consult {
       display: none; }
 
   .footer-bottom {
-    display: none; } }
+    margin-bottom: 35px; }
+    .footer-bottom .container .column-left {
+      width: 100%;
+      text-align: center; }
+      .footer-bottom .container .column-left .footer-logo {
+        vertical-align: top;
+        display: inline-block;
+        margin-top: 35px;
+        margin-left: 0px;
+        width: 100%; }
+      .footer-bottom .container .column-left .footer-contact {
+        margin-top: 15px;
+        width: 100%;
+        padding-left: 0; }
+    .footer-bottom .container .column-right {
+      padding: 0;
+      padding-top: 15px;
+      width: 100%;
+      text-align: center;
+      overflow: hidden; } }
 @media screen and (max-width: 310px) {
   section.section-main {
     padding-top: 75px; }

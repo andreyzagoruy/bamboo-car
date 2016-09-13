@@ -52,7 +52,7 @@ input, select
   width: 215px
   height: 40px
 select
-  background: $color-input url("../images/icons/select_arrow.png") 190px 20px no-repeat
+  background: $color-input url("../images/icons/select_arrow.png") right 16px bottom 18px no-repeat
 
 a.to-top-link
   z-index: 10
@@ -259,7 +259,7 @@ section.section-prices
           display: inline-block
           padding-bottom: 10px
           border-bottom: $color-hr solid 1px
-        th
+        td
           font-weight: 300
           padding-right: 65px
           &:nth-child(1)
@@ -269,10 +269,10 @@ section.section-prices
             padding-right: 0
       tbody
         margin-top: 10px
-        th:nth-child(1)
+        td:nth-child(1)
           font-weight: 300
         tr:last-of-type
-          th
+          td
             font-weight: 800
             color: $color-main-red
             &:nth-child(2)
@@ -286,7 +286,7 @@ section.section-prices
         display: block
         padding-bottom: 10px
         white-space: nowrap
-      th
+      td
         @extend .text-heavy-small
         display: inline-block
         position: relative
@@ -472,14 +472,16 @@ section.section-reviews
     .next-slide
       background: url("../images/icons/slider_arrow_right.png") 0 0 no-repeat
       display: inline-block
-      height: 6px
+      height: 7px
       width: 40px
+      vertical-align: middle
       cursor: pointer
     .prev-slide
       background: url("../images/icons/slider_arrow_left.png") 0 0 no-repeat
       display: inline-block
-      height: 6px
+      height: 7px
       width: 40px
+      vertical-align: middle
       cursor: pointer
   .slide
     display: none

@@ -438,7 +438,7 @@ $.fn.doubleSlider = function (opt) {
 					DOM.$pagination = $('<div>').addClass( opt.paginationHolderClass );
 				}
 
-				$('<span>')
+				$('<div>')
 					.addClass( opt.prevSlideClass )
 				//	.html(opt.prevSlideHtml)
 					.appendTo( DOM.$pagination );
